@@ -149,7 +149,8 @@ body {
   /* Handle the widths */
   .masthead,
   .mastfoot,
-  .cover-container {
+  .cover-container
+  .container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
@@ -161,3 +162,4 @@ body {
     width: 700px;
   }
 }
+

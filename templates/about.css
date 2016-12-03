@@ -162,3 +162,7 @@ body {
     width: 700px;
   }
 }
+
+a {
+  font-weight: bold;
+}

@@ -112,9 +112,11 @@ body {
 .cover {
   padding: 0 20px;
 }
-.cover p {
-  text-align: left;
-  font-size: 12pt;
+.cover dl {
+  font-size: 16pt;
+}
+.cover dl dd {
+  font-weight: normal;
 }
 .cover a {
   text-decoration: underline;
@@ -166,6 +168,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 992px;
   }
 }

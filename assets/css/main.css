@@ -2,13 +2,17 @@
   background-color: #444C5C; 
 }
 
-.masthead a {
-  color: #FFFFFF;
+.navbar-brand {
+  font-size: 1.5em;
 }
 
-.nav {
-  font-size: 1.5em;
-  outline: 1px solid white;
+.navbar {
+  background-color: #444C5C; 
+  font-size: 1.2em;
+}
+
+.navbar a {
+  color: #FFFFFF;
 }
 
 #about p, #contact p {
@@ -32,4 +36,19 @@
 
 .nav > li > a:focus {
   background-color: unset;
+}
+
+/* Padding for the fixed navbar at top of page. */
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
+:target {
+  padding-top:25px;
 }

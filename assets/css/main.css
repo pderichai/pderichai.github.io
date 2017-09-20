@@ -1,0 +1,35 @@
+.masthead {
+  background-color: #444C5C; 
+}
+
+.masthead a {
+  color: #FFFFFF;
+}
+
+.nav {
+  font-size: 1.5em;
+  outline: 1px solid white;
+}
+
+#about p, #contact p {
+  font-size: 1.5em;
+}
+
+.mastfoot {
+  background-color: #444C5C;
+  margin-top: 2em;
+}
+
+.mastfoot h3 {
+  color: #FFFFFF;
+}
+
+/* Unsetting Bootstrap defaults I don't like. */
+.nav > li > a:hover {
+  text-decoration: underline;
+  background-color: unset;
+}
+
+.nav > li > a:focus {
+  background-color: unset;
+}

@@ -38,17 +38,29 @@
   background-color: unset;
 }
 
-/* Padding for the fixed navbar at top of page. */
+/** Padding for the fixed navbar at top of page. **/
 body {
   padding-top: 80px;
 }
 
-@media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
-}
-
 :target {
   padding-top:25px;
+}
+
+/* When the site gets small, turn the fixed navbar into a static navbar and
+   remove paddings. */
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+      position: relative;
+      top: auto;
+  }
+  .navbar-collapse {
+      max-height: none;
+  }
+  body {
+      padding-top: 0;
+  }
+  :target {
+    padding-top: 0;
+  }
 }

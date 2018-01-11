@@ -14,8 +14,14 @@
   <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  <!-- JQuery -->
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/d1f118183d.js"></script>
+
+  <!-- Social Buttons -->
+  <link href="assets/css/bootstrap-social.css" rel="stylesheet" >
+
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/main.v1.1.css">
+  <link rel="stylesheet" href="assets/css/main.v1.2.css">
 </head>
 
   <body>
@@ -30,23 +36,34 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DERIC PANG</a>
+            <a class="navbar-brand" href="#">Deric Pang</a>
           </div>
           <ul class="nav navbar-nav navbar-right">
+            <!--
             <li><a href="#blog">Blog</a></li>
+            -->
             <li><a href="#projects">Projects</a></li>
             <li><a href="#pubs">Publications</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="assets/deric-pang-resume-2017.pdf">Resume</a></li>
+            <li><a href="assets/deric-pang-resume-2018.pdf">Resume</a></li>
           </ul>
         </div>
       </nav>
     </div>
 
-    <div class="container" id="about">
+    <span class="anchor" id="about"></span>
+    <div class="container" id="about-content">
       <div class="row">
         <div class="col-sm-4">
           <img src="assets/img/deric.jpg" class="img-rounded img-responsive" alt="Deric">
+          <div class="text-center top-buffer">
+            <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/dericp">
+              <span class="fa fa-github"></span>
+            </a>
+            <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://linkedin.com/in/dericp">
+              <span class="fa fa-linkedin"></span>
+            </a>
+          </div>
         </div>
 
         <div class="col-sm-8">
@@ -62,7 +79,11 @@
           </p>
 
           <p class="text-left">
-            Last summer, I worked in <a href="https://www.amazon.jobs/en/teams/alexa-machine-learning?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&team_category%5B%5D=alexa-machine-learning&cache">Alexa Machine Learning</a> at Amazon.
+            This spring, I'll be interning at <a href="http://www.nvidia.com/page/home.html">NVIDIA</a> working on autonomous drones.
+          </p>
+
+          <p class="text-left">
+            Last summer, I worked in <a href="https://www.amazon.jobs/en/teams/alexa-machine-learning?base_query=&amp;loc_query=&amp;job_count=10&amp;result_limit=10&amp;sort=relevant&amp;team_category%5B%5D=alexa-machine-learning&amp;cache">Alexa Machine Learning</a> at Amazon.
           </p>
 
           <p class="text-left">
@@ -84,128 +105,118 @@
       </div>
     </div>
     
+    <!--
     <div class="container" id="blog">
       <h1 class="page-header text-center">Blog</h1>
-      <p>Stuff Coming Soon!</p>
     </div>
+    -->
 
-    <div class="container" id="projects">
-
+    <span class="anchor" id="projects"></span>
+    <div class="container">
       <h1 class="page-header text-center">Projects</h1>
 
       <div class="row">
-        <div class="col-sm-6">
-          <h3 class="text-primary">Tellina</h3>
-          <h4>Translates English sentences into Bash commands using deep learning.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/TellinaTool/tellina">GitHub</a></li>
-            <li><a href="http://tellina.rocks">Website</a></li>
-            <li><a href="assets/pubs/tellina_tr170510.pdf">Paper</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-6">
-          <h3 class="text-primary">Search Engine</h3>
-          <h4>Implemented using a language model and term frequency model.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/search-engine">GitHub</a></li>
-          </ul>
+        <h3>Tellina</h3>
+        <h4 class="text-muted">Translates English sentences into Bash commands using deep learning.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/TellinaTool/tellina">GitHub</a></button>
+          <button type="button" class="btn btn-default"><a href="http://tellina.rocks">Website</a></button>
+          <button type="button" class="btn btn-default"><a href="assets/pubs/tellina_tr170510.pdf">Paper</a></button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-6">
-          <h3 class="text-primary">Digit Recognition</h3>
-          <h4>Digit recognition using k-NN, an SVM (PEGASOS and Random Fourier Features), and a CNN.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/digit-recognition">GitHub</a></li>
-            <li><a href="assets/projects/digit-recognition/writeup.pdf">Writeup</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-6">
-          <h3 class="text-primary">Automatic Bug Finder</h3>
-          <h4>Finds bugs by minimizing patches with delta debugging.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/patch-minimization">GitHub</a></li>
-          </ul>
+        <h3>Search Engine</h3>
+        <h4 class="text-muted">Implemented using a language model and term frequency model.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/search-engine">GitHub</a></button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-6">
-          <h3 class="text-primary">N-Gram Language Models</h3>
-          <h4>Implemented with Katz back-off and linear interpolation.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/n-gram-language-models">GitHub</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-6">
-          <h3 class="text-primary">Large Scale Machine Learning</h3>
-          <h4>Parallel machine learning algorithms.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/large-scale-classification">Classification</a></li>
-            <li><a href="https://github.com/dericp/large-scale-clustering">Clustering</a></li>
-            <li><a href="https://github.com/dericp/locality-sensitive-hashing">Locality Sensitive Hashing</a></li>
-            <li><a href="https://github.com/dericp/large-scale-bandits">Bandits</a></li>
-          </ul>
+        <h3>Digit Recognition</h3>
+        <h4 class="text-muted">Digit recognition using k-NN, an SVM (PEGASOS and Random Fourier Features), and a CNN.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/digit-recognition">GitHub</a></button>
+          <button type="button" class="btn btn-default"><a href="assets/projects/digit-recognition/writeup.pdf">Writeup</a></button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-6">
-          <h3 class="text-primary">Diff Utils</h3>
-          <h4>Easily modify unified diff files.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/diff-utils">GitHub</a></li>
-          </ul>
+        <h3>Automatic Bug Finder</h3>
+        <h4 class="text-muted">Finds bugs by minimizing patches with delta debugging.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/patch-minimization">GitHub</a></button>
         </div>
-        <div class="col-sm-6">
-          <h3 class="text-primary">Pong</h3>
-          <h4>Small game of Pong written using PyGame.</h4>
-          <ul class="pagination">
-            <li><a href="https://github.com/dericp/pong">GitHub</a></li>
-          </ul>
+      </div>
+
+      <div class="row">
+        <h3>N-Gram Language Models</h3>
+        <h4 class="text-muted">Implemented with Katz back-off and linear interpolation.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/n-gram-language-models">GitHub</a></button>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>Large Scale Machine Learning</h3>
+        <h4 class="text-muted">Parallel machine learning algorithms.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/large-scale-classification">Classification</a></button>
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/large-scale-clustering">Clustering</a></button>
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/locality-sensitive-hashing">Locality Sensitive Hashing</a></button>
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/large-scale-bandits">K-armed Bandit</a></button>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>Diff Utils</h3>
+        <h4 class="text-muted">Easily modify unified diff files.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/diff-utils">GitHub</a></button>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>Pong</h3>
+        <h4 class="text-muted">Small game of Pong written using PyGame.</h4>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/pong">GitHub</a></button>
         </div>
       </div>
 
     </div>
 
-    <div class="container" id="pubs">
+    <span class="anchor" id="pubs"></span>
+    <div class="container">
       <h1 class="page-header text-center">Publications</h1>
+
       <div class="row">
-        <div class="col-sm-6">
-          <h3 class="text-primary">Program Synthesis from Natural Language Using Recurrent Neural Networks</h3>
-          <h4>University of Washington Department of Computer Science and Engineering technical report UW-CSE-17-03-01, (Seattle, WA, USA), Mar. 2017</h4>
-          <p>Xi Victoria Lin, Chenglong Wang, Deric Pang, Kevin Vu, Luke Zettlemoyer, and Michael D. Ernst</p>
-          <ul class="pagination">
-            <li><a href="assets/pubs/tellina_tr170510.pdf">UW Tech Report</a></li>
-            <li><a href="https://github.com/TellinaTool/tellina">Tellina</a></li>
-          </ul>
+        <h3>Program Synthesis from Natural Language Using Recurrent Neural Networks</h3>
+        <h4 class="text-muted">University of Washington Department of Computer Science and Engineering technical report UW-CSE-17-03-01, (Seattle, WA, USA), Mar. 2017</h4>
+        <p>Xi Victoria Lin, Chenglong Wang, Deric Pang, Kevin Vu, Luke Zettlemoyer, and Michael D. Ernst</p>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="assets/pubs/tellina_tr170510.pdf">UW Tech Report</a></button>
+          <button type="button" class="btn btn-default"><a href="https://github.com/TellinaTool/tellina">Tellina</a></button>
         </div>
-        <div class="col-sm-6">
-          <h3 class="text-primary">Evaluating and improving fault localization</h3>
-          <h4>In ICSE 2017, Proceedings of the 39th International Conference on Software Engineering, (Buenos Aires, Argentina), May 2017</h4>
+      </div>
+
+      <div class="row">
+          <h3>Evaluating and improving fault localization</h3>
+          <h4 class="text-muted">In ICSE 2017, Proceedings of the 39th International Conference on Software Engineering, (Buenos Aires, Argentina), May 2017</h4>
           <p>Spencer Pearson, José Campos, René Just, Gordon Fraser, Rui Abreu, Michael D. Ernst, Deric Pang, and Benjamin Keller</p>
-          <ul class="pagination">
-            <li><a href="assets/pubs/fault-localization-icse2017.pdf">PDF</a></li>
-            <li><a href="assets/pubs/fault-localization-tr160803.pdf">UW Tech Report</a></li>
-          </ul>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><a href="assets/pubs/fault-localization-icse2017.pdf">PDF</a></button>
+          <button type="button" class="btn btn-default"><a href="assets/pubs/fault-localization-tr160803.pdf">UW Tech Report</a></button>
         </div>
       </div>
     </div>
 
-    <div class="container" id="contact">
+    <span class="anchor" id="contact"></span>
+    <div class="container" id="contact-content">
       <h1 class="page-header text-center">Contact</h1>
       <p>email: dericp[at]cs[dot]washington[dot]edu</p>
     </div>
 
-    <footer class="mastfoot" id="find">
-      <div class="container text-center">
-        <h3>Find me</h3>
-        <ul class="pager">
-          <li><a href="https://github.com/dericp">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/dericp">LinkedIn</a></li>
-        </ul>
-      </div>
-    </footer>
   </body>
 </html>

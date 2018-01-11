@@ -15,7 +15,7 @@
   color: #FFFFFF;
 }
 
-#about p, #contact p {
+#about-content p, #contact-content p {
   font-size: 1.5em;
 }
 
@@ -28,6 +28,19 @@
   color: #FFFFFF;
 }
 
+/* Adds a small top margin to a div. */
+.top-buffer {
+  margin-top: 10px;
+}
+
+/* Anchor class for fixed-navbar. */
+.anchor {
+  display: block;
+  height: 50px; /*same height as header*/
+  margin-top: -50px; /*same height as header*/
+  visibility: hidden;
+}
+
 /* Unsetting Bootstrap defaults I don't like. */
 .nav > li > a:hover {
   text-decoration: underline;
@@ -38,13 +51,9 @@
   background-color: unset;
 }
 
-/** Padding for the fixed navbar at top of page. **/
+/* Padding for the fixed navbar at top of page. */
 body {
   padding-top: 80px;
-}
-
-:target {
-  padding-top:25px;
 }
 
 /* When the site gets small, turn the fixed navbar into a static navbar and
@@ -59,8 +68,5 @@ body {
   }
   body {
       padding-top: 0;
-  }
-  :target {
-    padding-top: 0;
   }
 }

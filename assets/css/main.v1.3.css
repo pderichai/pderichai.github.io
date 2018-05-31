@@ -16,7 +16,7 @@
 }
 
 #about-content p, #contact-content p {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .mastfoot {
@@ -29,8 +29,8 @@
 }
 
 /* Adds a small top margin to a div. */
-.top-buffer {
-  margin-top: 10px;
+.margin-bottom-10 {
+  margin-bottom: 10px;
 }
 
 /* Anchor class for fixed-navbar. */
@@ -54,6 +54,22 @@
 /* Padding for the fixed navbar at top of page. */
 body {
   padding-top: 80px;
+}
+
+/* Padding for the borders. */
+.panel {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+/* Header underline color. */
+.page-header {
+  border-color: #444C5C;
+}
+
+/* Custom class to get rid of top margin. Used for the first "Hello!" */
+.margin-top-0 {
+  margin-top: 0;
 }
 
 /* When the site gets small, turn the fixed navbar into a static navbar and

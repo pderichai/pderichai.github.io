@@ -21,7 +21,7 @@
   <link href="assets/css/bootstrap-social.css" rel="stylesheet" >
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/main.v1.2.css">
+  <link rel="stylesheet" href="assets/css/main.v1.3.css">
 </head>
 
   <body>
@@ -44,6 +44,7 @@
             -->
             <li><a href="#projects">Projects</a></li>
             <li><a href="#pubs">Publications</a></li>
+            <li><a href="#teaching">Teaching</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="assets/deric-pang-resume-2018.pdf">Resume</a></li>
           </ul>
@@ -56,18 +57,10 @@
       <div class="row">
         <div class="col-sm-4">
           <img src="assets/img/deric.jpg" class="img-rounded img-responsive" alt="Deric">
-          <div class="text-center top-buffer">
-            <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/dericp">
-              <span class="fa fa-github"></span>
-            </a>
-            <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://linkedin.com/in/dericp">
-              <span class="fa fa-linkedin"></span>
-            </a>
-          </div>
         </div>
 
         <div class="col-sm-8">
-          <h3>Hello!</h3>
+          <h3 class="margin-top-0">Hello!</h3>
           <p class="text-left">
             I study computer science in the <a href="https://www.cs.washington.edu/">Allen School</a>
             at the <a href="https://www.washington.edu/">University of Washington</a>.
@@ -78,12 +71,10 @@
           </p>
 
           <p class="text-left">
-            I recently started working in <a href="http://www.ark.cs.washington.edu/">Noah's Ark</a>
+            I'm a researcher in <a href="http://www.ark.cs.washington.edu/">Noah's Ark</a>
             which is part of the larger
-            <a href="https://www.cs.washington.edu/research/nlp">UW NLP</a> group.
-            I'm also a researcher in the Allen School's
-            <a href="https://www.uwplse.org">Programming Languages &amp; Software Engineering</a> group
-            where I'm advised by <a href="https://homes.cs.washington.edu/~mernst/">Michael Ernst</a>.
+            <a href="https://nlp.washington.edu/">UW NLP</a> group. I'm advised by
+            <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>.
           </p>
 
           <p class="text-left">
@@ -91,6 +82,12 @@
           </p>
 
           <h3>Previously . . .</h3>
+          <p class="text-left">
+            I was a researcher in the Allen School's
+            <a href="https://www.uwplse.org">Programming Languages &amp; Software Engineering</a> group
+            where I was advised by <a href="https://homes.cs.washington.edu/~mernst/">Michael Ernst</a>.
+          </p>
+
           <p class="text-left">
             I interned in <a href="https://www.amazon.jobs/en/teams/alexa-machine-learning?base_query=&amp;loc_query=&amp;job_count=10&amp;result_limit=10&amp;sort=relevant&amp;team_category%5B%5D=alexa-machine-learning&amp;cache">Alexa Machine Learning</a> at Amazon.
           </p>
@@ -104,117 +101,186 @@
     
     <!--
     <div class="container" id="blog">
-      <h1 class="page-header text-center">Blog</h1>
+      <h2 class="page-header text-left">Blog</h2>
     </div>
     -->
 
     <span class="anchor" id="projects"></span>
     <div class="container">
-      <h1 class="page-header text-center">Research Projects</h1>
+      <div class="row">
+        <h2 class="page-header text-left">Research Projects</h2>
+      </div>
 
       <div class="row">
-        <h3>Tellina</h3>
-        <h4 class="text-muted">Translates English sentences into Bash commands using deep learning.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/TellinaTool/tellina">GitHub</a></button>
-          <button type="button" class="btn btn-default"><a href="http://tellina.rocks">Website</a></button>
-          <button type="button" class="btn btn-default"><a href="assets/pubs/tellina_tr170510.pdf">Paper</a></button>
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <h4>Tellina</h4>
+            <h5 class="text-muted">Translates English sentences into Bash commands using deep learning.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/TellinaTool/tellina'">GitHub</button>
+              <button type="button" class="btn btn-default" onclick="location.href='http://tellina.rocks'">Website</button>
+              <button type="button" class="btn btn-default" onclick="location.href='assets/pubs/tellina_tr170510.pdf'">Paper</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <h4>Automatic Bug Finder</h4>
+            <h5 class="text-muted">Finds bugs by minimizing patches with delta debugging.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/patch-minimization'">GitHub</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="row">
-        <h3>Automatic Bug Finder</h3>
-        <h4 class="text-muted">Finds bugs by minimizing patches with delta debugging.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/patch-minimization">GitHub</a></button>
-        </div>
-      </div>
-
-      <h1 class="page-header text-center">Other Projects</h1>
-
-      <div class="row">
-        <h3>Search Engine</h3>
-        <h4 class="text-muted">Implemented using a language model and term frequency model.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/search-engine">GitHub</a></button>
-        </div>
+        <h2 class="page-header text-left">Other Projects</h2>
       </div>
 
       <div class="row">
-        <h3>Digit Recognition</h3>
-        <h4 class="text-muted">Digit recognition using k-NN, an SVM (PEGASOS and Random Fourier Features), and a CNN.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/digit-recognition">GitHub</a></button>
-          <button type="button" class="btn btn-default"><a href="assets/projects/digit-recognition/writeup.pdf">Writeup</a></button>
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+            <h4>Search Engine</h4>
+            <h5 class="text-muted">Implemented using a language model and term frequency model.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/search-engine'">GitHub</button>
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <h4>Digit Recognition</h4>
+            <h5 class="text-muted">Digit recognition using k-NN, SVMs, and CNNs.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/digit-recognition'">GitHub</button>
+              <button type="button" class="btn btn-default" onclick="location.href='assets/projects/digit-recognition/writeup.pdf'">Writeup</button>
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <h4>N-Gram Language Models</h4>
+            <h5 class="text-muted">Implemented with Katz back-off and linear interpolation.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/n-gram-language-models'">GitHub</button>
+            </div>
+          </div>
         </div>
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <h4>Large Scale Machine Learning</h4>
+            <h5 class="text-muted">Parallel machine learning algorithms.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/large-scale-classification'">Classification</button>
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/large-scale-clustering'">Clustering</button>
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/locality-sensitive-hashing'">Locality Sensitive Hashing</button>
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/large-scale-bandits'">K-armed Bandit</button>
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <h4>Diff Utils</h4>
+            <h5 class="text-muted">Easily modify unified diff files.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/diff-utils'">GitHub</button>
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <h4>Pong</h4>
+            <h5 class="text-muted">Small game of Pong written using PyGame.</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://github.com/dericp/pong'">GitHub</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="anchor" id="teaching"></span>
+    <div class="container">
+      <div class="row">
+        <h2 class="page-header text-left">Teaching</h2>
       </div>
 
       <div class="row">
-        <h3>N-Gram Language Models</h3>
-        <h4 class="text-muted">Implemented with Katz back-off and linear interpolation.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/n-gram-language-models">GitHub</a></button>
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <h4>Computer Programming I</h4>
+            <h5 class="text-muted">Teaching Assistant</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://courses.cs.washington.edu/courses/cse142/18sp/'">Spring 2018</button>
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <h4>Software Design &amp; Implementation</h4>
+            <h5 class="text-muted">Teaching Assistant</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://courses.cs.washington.edu/courses/cse331/16wi/'">Winter 2016</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <h4>Machine Learning</h4>
+            <h5 class="text-muted">Teaching Assistant</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" onclick="location.href='https://courses.cs.washington.edu/courses/cse446/17sp/'">Spring 2017</button>
+              <button type="button" class="btn btn-default" onclick="location.href='https://courses.cs.washington.edu/courses/cse446/17au/'">Autumn 2017</button>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="row">
-        <h3>Large Scale Machine Learning</h3>
-        <h4 class="text-muted">Parallel machine learning algorithms.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/large-scale-classification">Classification</a></button>
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/large-scale-clustering">Clustering</a></button>
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/locality-sensitive-hashing">Locality Sensitive Hashing</a></button>
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/large-scale-bandits">K-armed Bandit</a></button>
-        </div>
-      </div>
-
-      <div class="row">
-        <h3>Diff Utils</h3>
-        <h4 class="text-muted">Easily modify unified diff files.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/diff-utils">GitHub</a></button>
-        </div>
-      </div>
-
-      <div class="row">
-        <h3>Pong</h3>
-        <h4 class="text-muted">Small game of Pong written using PyGame.</h4>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="https://github.com/dericp/pong">GitHub</a></button>
-        </div>
-      </div>
-
     </div>
 
     <span class="anchor" id="pubs"></span>
     <div class="container">
-      <h1 class="page-header text-center">Publications</h1>
-
       <div class="row">
-        <h3>Program Synthesis from Natural Language Using Recurrent Neural Networks</h3>
-        <h4 class="text-muted">University of Washington Department of Computer Science and Engineering technical report UW-CSE-17-03-01, (Seattle, WA, USA), Mar. 2017</h4>
+        <h2 class="page-header text-left">Publications</h2>
+      </div>
+
+      <div class="row panel panel-primary">
+        <h4>Program Synthesis from Natural Language Using Recurrent Neural Networks</h4>
+        <h5 class="text-muted">University of Washington Department of Computer Science and Engineering technical report UW-CSE-17-03-01, (Seattle, WA, USA), Mar. 2017</h5>
         <p>Xi Victoria Lin, Chenglong Wang, Deric Pang, Kevin Vu, Luke Zettlemoyer, and Michael D. Ernst</p>
         <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="assets/pubs/tellina_tr170510.pdf">UW Tech Report</a></button>
-          <button type="button" class="btn btn-default"><a href="https://github.com/TellinaTool/tellina">Tellina</a></button>
+          <button type="button" class="btn btn-default" onclick="location.href='assets/pubs/tellina_tr170510.pdf'">UW Tech Report</button>
+          <button type="button" class="btn btn-default" onclick="location.href='https://github.com/TellinaTool/tellina'">Tellina</button>
         </div>
       </div>
 
-      <div class="row">
-          <h3>Evaluating and improving fault localization</h3>
-          <h4 class="text-muted">In ICSE 2017, Proceedings of the 39th International Conference on Software Engineering, (Buenos Aires, Argentina), May 2017</h4>
+      <div class="row panel panel-primary">
+          <h4>Evaluating and improving fault localization</h4>
+          <h5 class="text-muted">In ICSE 2017, Proceedings of the 39th International Conference on Software Engineering, (Buenos Aires, Argentina), May 2017</h5>
           <p>Spencer Pearson, José Campos, René Just, Gordon Fraser, Rui Abreu, Michael D. Ernst, Deric Pang, and Benjamin Keller</p>
         <div class="btn-group">
-          <button type="button" class="btn btn-default"><a href="assets/pubs/fault-localization-icse2017.pdf">PDF</a></button>
-          <button type="button" class="btn btn-default"><a href="assets/pubs/fault-localization-tr160803.pdf">UW Tech Report</a></button>
+          <button type="button" class="btn btn-default" onclick="location.href='assets/pubs/fault-localization-icse2017.pdf'">PDF</button>
+          <button type="button" class="btn btn-default" onclick="location.href='assets/pubs/fault-localization-tr160803.pdf'">UW Tech Report</button>
         </div>
       </div>
     </div>
 
     <span class="anchor" id="contact"></span>
     <div class="container" id="contact-content">
-      <h1 class="page-header text-center">Contact</h1>
-      <p>dericp [at] cs.washington.edu</p>
+      <div class="row">
+        <h2 class="page-header text-center">Contact</h2>
+      </div>
+
+      <div class="row text-center">
+        <p>dericp [at] cs.washington.edu</p>
+      </div>
+
+      <div class="text-center margin-bottom-10">
+        <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/dericp">
+          <span class="fa fa-github"></span>
+        </a>
+        <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://linkedin.com/in/dericp">
+          <span class="fa fa-linkedin"></span>
+        </a>
+      </div>
     </div>
 
   </body>

@@ -15,7 +15,7 @@
   color: #FFFFFF;
 }
 
-#about-content p, #contact-content p {
+#about-content p, #about-content li, #contact-content p, #previously-content li {
   font-size: 1.3em;
 }
 

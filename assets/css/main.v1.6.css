@@ -1,5 +1,5 @@
 .masthead {
-  background-color: #444C5C; 
+  background-color: #444C5C;
 }
 
 .navbar-brand {
@@ -7,7 +7,7 @@
 }
 
 .navbar {
-  background-color: #444C5C; 
+  background-color: #444C5C;
   font-size: 1.2em;
 }
 
@@ -36,8 +36,8 @@
 /* Anchor class for fixed-navbar. */
 .anchor {
   display: block;
-  height: 25px;
-  margin-top: -25px;
+  height: 40px;
+  margin-top: -40;
   visibility: hidden;
 }
 
@@ -56,33 +56,11 @@ body {
   padding-top: 80px;
 }
 
-/* Padding for the borders. */
-.panel {
-  padding-left: 15px;
-  padding-bottom: 15px;
-}
-
 /* Header underline color. */
 .page-header {
   border-color: #444C5C;
 }
 
-/* Custom class to get rid of top margin. Used for the first "Hello!" */
-.margin-top-0 {
-  margin-top: 0;
-}
-
-/* When the site gets small, turn the fixed navbar into a static navbar and
-   remove paddings. */
-@media (max-width: 767px) {
-  .navbar-fixed-top {
-      position: relative;
-      top: auto;
-  }
-  .navbar-collapse {
-      max-height: none;
-  }
-  body {
-      padding-top: 0;
-  }
+.top-buffer {
+  margin-top: 20px;
 }

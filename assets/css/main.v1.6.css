@@ -28,11 +28,6 @@
   color: #FFFFFF;
 }
 
-/* Adds a small top margin to a div. */
-.margin-bottom-10 {
-  margin-bottom: 10px;
-}
-
 /* Anchor class for fixed-navbar. */
 .anchor {
   display: block;

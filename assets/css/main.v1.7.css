@@ -1,0 +1,24 @@
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar {
+  font-size: 1.2rem;
+}
+
+#about-content p, #about-content li, #previously-content li {
+  font-size: 1.3rem;
+}
+
+/* Anchor class for fixed-navbar. */
+.anchor {
+  display: block;
+  height: 40px;
+  margin-top: -40;
+  visibility: hidden;
+}
+
+/* Padding for the fixed navbar at top of page. */
+body {
+  padding-top: 80px;
+}

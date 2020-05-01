@@ -20,16 +20,16 @@
   <script src="https://use.fontawesome.com/d1f118183d.js"></script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/main.v1.7.css">
+  <link rel="stylesheet" href="assets/css/main.v1.8.css">
 </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Deric Pang</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Deric Pang</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
@@ -64,29 +64,32 @@
     </div>
   </nav>
 
-  <div class="container" id="about-content">
+  <div class="container mb-5">
     <div class="row">
       <div class="col-sm-4">
         <img src="assets/img/deric2.jpg" class="img-fluid rounded" alt="Deric">
       </div>
       <div class="col my-auto">
-        <h2>Hello!</h2>
-        <p class="text-left">
-          I'm a software engineer at Google working on commonsense knowledge and
-          reasoning. I'm interested in natural language processing, machine
-          learning, and software engineering.
-        </p>
-        <p class="text-left">
-          Outside of computer science, I enjoy playing violin and tennis.
-        </p>
-        <button class="btn btn-outline-primary btn" type="button" data-toggle="collapse" data-target="#previously-content" aria-expanded="false" aria-controls="previously-content">
+        <div id="about-content">
+          <h2>Hello!</h2>
+          <p class="text-left">
+            I'm a software engineer at Google working on commonsense knowledge
+            and reasoning. I'm interested in natural language processing,
+            machine learning, and software engineering.
+          </p>
+          <p class="text-left">
+            Outside of computer science, I enjoy playing violin and tennis.
+          </p>
+        </div>
+        <button class="btn btn-outline-primary btn" type="button"
+            data-toggle="collapse" data-target="#previously-content"
+            aria-expanded="false" aria-controls="previously-content">
           Previously, I...
         </button>
         <div class="collapse" id="previously-content">
           <ul>
             <li>
-              studied computer science at the
-              <a href="https://www.washington.edu/">University of Washington</a>
+              studied computer science at the <a href="https://www.washington.edu/">University of Washington</a>
               as an M.S. student in the
               <a href="https://www.cs.washington.edu/">Allen School</a>.
             </li>
@@ -126,12 +129,11 @@
     </div>
   </div>
 
-
   <span class="anchor" id="projects"></span>
 
-  <div class="container" id="projects-content">
-    <h2 class="pb-2 mt-4 mb-2 border-bottom">Projects</h2>
-    <div class="list-group">
+  <div class="container mb-4" id="projects-content">
+    <h2 class="pb-2 border-bottom">Projects</h2>
+    <div class="list-group list-group-flush">
 
       <div class="card list-group-item">
         <div class="card-body">
@@ -167,9 +169,9 @@
 
   <span class="anchor" id="publications"></span>
 
-  <div class="container">
-    <h2 class="pb-2 mt-4 mb-2 border-bottom">Publications</h2>
-    <div class="list-group">
+  <div class="container mb-4">
+    <h2 class="pb-2 border-bottom">Publications</h2>
+    <div class="list-group list-group-flush">
 
       <div class="card list-group-item">
         <div class="card-body">
@@ -205,9 +207,9 @@
 
   <span class="anchor" id="teaching"></span>
 
-  <div class="container">
-    <h2 class="pb-2 mt-4 mb-2 border-bottom">Teaching</h2>
-    <div class="list-group">
+  <div class="container mb-4">
+    <h2 class="pb-2 border-bottom">Teaching</h2>
+    <div class="list-group list-group-flush">
 
       <div class="card list-group-item">
         <div class="card-body">
@@ -253,5 +255,7 @@
 
     </div>
   </div>
+
+  <footer class="mt-4"></footer>
 
 </body>

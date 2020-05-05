@@ -2,9 +2,10 @@
   font-size: 1.3rem;
 }
 
-#previously-content p {
+#previously-blurbs span {
   display: none;
-  transition: display 1s;
+  opacity: 0;
+  transition: 1s opacity;
 }
 
 #tellina-search-button-logo {

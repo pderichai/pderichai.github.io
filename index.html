@@ -43,7 +43,7 @@
     <script src="https://use.fontawesome.com/d1f118183d.js"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.v1.8.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
@@ -59,77 +59,67 @@
             <p class="text-justify">
               Outside of computer science, I enjoy playing violin and tennis.
             </p>
-          </div>
-          <div class="row">
-            <div class="col-3 my-auto text-center">
-              <button
-                class="btn btn-outline-primary btn"
-                id="previously-button"
-                type="button"
-                aria-controls="previously-content"
-              >
-                Previously, I...<br />
-                <small>(click for another)</small>
-              </button>
-            </div>
-            <div class="col-9 my-auto" id="previously-content">
-              <p class="my-auto">
-                studied computer science at the
-                <a href="https://www.washington.edu/"
-                  >University of Washington</a
-                >
-                as an M.S. student in the
-                <a href="https://www.cs.washington.edu/">Allen School</a>.
-              </p>
-              <p class="my-auto">
-                was a researcher in
-                <a href="http://www.ark.cs.washington.edu/">Noah's Ark</a>
-                and <a href="https://nlp.washington.edu/">UW NLP</a>
-                where I was advised by
-                <a href="https://homes.cs.washington.edu/~nasmith/"
-                  >Noah Smith</a
-                >.
-              </p>
-              <p class="my-auto">
-                interned at
-                <a href="https://unity3d.ai/">Unity Technologies</a>
-                where I worked on the
-                <a href="https://github.com/Unity-Technologies/ml-agents"
-                  >Unity Machine Learning Agents Toolkit</a
-                >.
-              </p>
-              <p class="my-auto">
-                interned at <a href="http://www.nvidia.com/">NVIDIA</a>
-                where I worked on
-                <a href="https://www.youtube.com/watch?v=pqFGZB8KCnQ"
-                  >training autonomous robots in simulation</a
-                >.
-              </p>
-              <p class="my-auto">
-                was a researcher in
-                <a href="https://www.uwplse.org">UW PLSE</a>
-                where I was advised by
-                <a href="https://homes.cs.washington.edu/~mernst/"
-                  >Michael Ernst</a
-                >.
-              </p>
-              <p class="my-auto">
-                interned at Amazon on the
-                <a href="https://www.amazon.jobs/en/teams/alexa-ai/"
-                  >Alexa Machine Learning</a
-                >
-                team.
-              </p>
-              <p class="my-auto">
-                studied at <a href="https://www.ethz.ch">ETH Z&uuml;rich</a> as
-                a computer science exchange student.
-              </p>
-            </div>
+            <p class="text-justify">
+                Previously, I
+              <span id="previously-blurbs">
+                <span>
+                  studied computer science at the
+                  <a href="https://www.washington.edu/"
+                    >University of Washington</a
+                  >
+                  as an M.S. student in the
+                  <a href="https://www.cs.washington.edu/">Allen School</a>.
+                </span>
+                <span>
+                  was a researcher in
+                  <a href="http://www.ark.cs.washington.edu/">Noah's Ark</a>
+                  and <a href="https://nlp.washington.edu/">UW NLP</a>
+                  where I was advised by
+                  <a href="https://homes.cs.washington.edu/~nasmith/"
+                    >Noah Smith</a
+                  >.
+                </span>
+                <span>
+                  interned at
+                  <a href="https://unity3d.ai/">Unity Technologies</a>
+                  where I worked on the
+                  <a href="https://github.com/Unity-Technologies/ml-agents"
+                    >Unity Machine Learning Agents Toolkit</a
+                  >.
+                </span>
+                <span>
+                  interned at <a href="http://www.nvidia.com/">NVIDIA</a>
+                  where I worked on
+                  <a href="https://www.youtube.com/watch?v=pqFGZB8KCnQ"
+                    >training autonomous robots in simulation</a
+                  >.
+                </span>
+                <span>
+                  was a researcher in
+                  <a href="https://www.uwplse.org">UW PLSE</a>
+                  where I was advised by
+                  <a href="https://homes.cs.washington.edu/~mernst/"
+                    >Michael Ernst</a
+                  >.
+                </span>
+                <span>
+                  interned at Amazon on the
+                  <a href="https://www.amazon.jobs/en/teams/alexa-ai/"
+                    >Alexa Machine Learning</a
+                  >
+                  team.
+                </span>
+                <span>
+                  studied at <a href="https://www.ethz.ch">ETH Z&uuml;rich</a> as
+                  a computer science exchange student.
+                </span>
+              </span>
+            </p>
           </div>
         </div>
         <div class="col-sm-4 text-center">
           <img
-            src="img/deric3.jpg"
+            src="img/profile.jpg"
             class="img-fluid rounded-circle mb-2"
             alt="Deric"
           />
@@ -188,7 +178,7 @@
           <a
             class="h3 nav-link"
             id="resume-tab"
-            href="assets/deric-pang-resume-2019-6.pdf"
+            href="assets/deric-pang-resume-2019.pdf"
             target="_blank"
             aria-selected="false"
             aria-controls="teaching-content"

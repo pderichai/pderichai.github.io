@@ -1,0 +1,33 @@
+#about-content p {
+  font-size: 1.3rem;
+}
+
+#previously-content p {
+  display: none;
+  transition: display 1s;
+}
+
+#tellina-search-button-logo {
+  height: 1.2rem;
+}
+
+#projects-list {
+  font-size: 1.3rem;
+}
+
+iframe {
+  border: 0px;
+}
+
+/* Anchor class for fixed-navbar. */
+.anchor {
+  display: block;
+  height: 4rem;
+  margin-top: -4rem;
+  visibility: hidden;
+}
+
+/* Padding for the fixed navbar at top of page. */
+body {
+  padding-top: 3rem;
+}

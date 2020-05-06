@@ -138,7 +138,7 @@
     </div>
 
     <div class="container">
-      <ul class="nav nav-tabs" id="tab-menu" role="tablist">
+      <ul class="nav nav-tabs flex-column flex-md-row" id="tab-menu" role="tablist">
         <li class="nav-item">
           <a
             class="h3 nav-link active"
@@ -196,13 +196,12 @@
           aria-labelledby="projects-tab"
         >
           <div class="row mt-4">
-            <div class="col-3">
-              <!-- On mobile this gets too cramped. What can we do? -->
+            <div class="col-md-3">
               <div
                 class="nav flex-column nav-pills"
                 id="projects-nav"
                 role="tablist"
-                aria-orientation="veritcal"
+                aria-orientation="vertical"
               >
                 <a
                   class="h4 nav-link active"
@@ -233,7 +232,7 @@
                 >
               </div>
             </div>
-            <div class="col-9 text-center">
+            <div class="col-md-9 text-center">
               <div class="tab-content">
                 <div
                   class="tab-pane fade"

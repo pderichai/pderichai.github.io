@@ -55,6 +55,12 @@
               I'm Deric, and I'm a software engineer at Google working on
               commonsense knowledge and reasoning. I'm interested in natural
               language processing, machine learning, and software engineering.
+              Here's my
+              <a
+                href="assets/deric-pang-resume-2019.pdf"
+                target="_blank"
+                >resume</a
+              >.
             </p>
             <p class="text-justify">
               Outside of computer science, I enjoy playing violin and tennis.
@@ -144,11 +150,23 @@
         <li class="nav-item">
           <a
             class="h3 nav-link active"
+            id="blog-tab"
+            data-toggle="tab"
+            href="#blog-content"
+            role="tab"
+            aria-selected="true"
+            aria-controls="blog-content"
+            >Blog</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="h3 nav-link"
             id="projects-tab"
             data-toggle="tab"
             href="#projects-content"
             role="tab"
-            aria-selected="true"
+            aria-selected="false"
             aria-controls="projects-content"
             >Projects</a
           >
@@ -177,22 +195,18 @@
             >Teaching</a
           >
         </li>
-        <li class="nav-item">
-          <a
-            class="h3 nav-link"
-            id="resume-tab"
-            href="assets/deric-pang-resume-2019.pdf"
-            target="_blank"
-            aria-selected="false"
-            aria-controls="teaching-content"
-            >Resum&eacute;</a
-          >
-        </li>
       </ul>
 
       <div class="tab-content">
         <div
           class="tab-pane fade show active"
+          id="blog-content"
+          role="tabpanel"
+          aria-labelledby="blog-tab"
+        >
+        </div>
+        <div
+          class="tab-pane fade"
           id="projects-content"
           role="tabpanel"
           aria-labelledby="projects-tab"

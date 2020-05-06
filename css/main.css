@@ -45,6 +45,10 @@
   font-size: 1.3rem;
 }
 
+#social-buttons a {
+  text-decoration: none;
+}
+
 iframe {
   border: 0px;
 }

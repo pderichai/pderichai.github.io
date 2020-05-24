@@ -1,0 +1,472 @@
+---
+layout: default
+---
+<div class="container mb-4">
+  <div class="row">
+    <div class="col my-auto">
+      <div id="about-content">
+        <p class="text-justify">
+          I'm Deric, and I'm a software engineer at Google working on
+          commonsense knowledge and reasoning. I'm interested in natural
+          language processing, machine learning, and software engineering.
+          Here's my
+          <a
+            href="assets/deric-pang-resume-2019.pdf"
+            target="_blank"
+            >resume</a
+          >.
+        </p>
+        <p class="text-justify">
+          Outside of computer science, I enjoy playing violin and tennis.
+        </p>
+        <p class="text-left" id="previously-text">
+          Previously, I
+          <span id="previously-blurbs">
+            <span>
+              studied computer science at the
+              <a href="https://www.washington.edu/"
+                >University of Washington</a
+              >
+              as an M.S. student in the
+              <a href="https://www.cs.washington.edu/">Allen School</a>.
+            </span>
+            <span>
+              was a researcher in
+              <a href="http://www.ark.cs.washington.edu/">Noah's Ark</a>
+              and <a href="https://nlp.washington.edu/">UW NLP</a>
+              where I was advised by
+              <a href="https://homes.cs.washington.edu/~nasmith/"
+                >Noah Smith</a
+              >.
+            </span>
+            <span>
+              interned at
+              <a href="https://unity3d.ai/">Unity Technologies</a>
+              where I worked on the
+              <a href="https://github.com/Unity-Technologies/ml-agents"
+                >Unity Machine Learning Agents Toolkit</a
+              >.
+            </span>
+            <span>
+              interned at <a href="http://www.nvidia.com/">NVIDIA</a>
+              where I worked on
+              <a href="https://www.youtube.com/watch?v=pqFGZB8KCnQ"
+                >training autonomous robots in simulation</a
+              >.
+            </span>
+            <span>
+              was a researcher in
+              <a href="https://www.uwplse.org">UW PLSE</a>
+              where I was advised by
+              <a href="https://homes.cs.washington.edu/~mernst/"
+                >Michael Ernst</a
+              >.
+            </span>
+            <span>
+              interned at Amazon on the
+              <a href="https://www.amazon.jobs/en/teams/alexa-ai/"
+                >Alexa Machine Learning</a
+              >
+              team.
+            </span>
+            <span>
+              studied at
+              <a href="https://www.ethz.ch">ETH Z&uuml;rich</a> as a
+              computer science exchange student.
+            </span>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center">
+      <img
+        src="img/profile.jpg"
+        class="img-fluid rounded-circle mb-2"
+        alt="Deric"
+      />
+      <span id="social-buttons">
+        <a class="mx-2" href="https://github.com/pderichai">
+          <i class="fa fa-github fa-3x"></i>
+        </a>
+        <a class="mx-2" href="https://linkedin.com/in/pderichai">
+          <i class="fa fa-linkedin fa-3x"></i>
+        </a>
+        <a class="mx-2" href="https://twitter.com/pderichai">
+          <i class="fa fa-twitter fa-3x"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <ul class="nav nav-tabs flex-column flex-md-row" id="tab-menu" role="tablist">
+    <li class="nav-item">
+      <a
+        class="h3 nav-link active"
+        id="projects-tab"
+        data-toggle="tab"
+        href="#projects-content"
+        role="tab"
+        aria-selected="true"
+        aria-controls="projects-content"
+        >Projects</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="h3 nav-link"
+        id="blog-tab"
+        data-toggle="tab"
+        href="#blog-content"
+        role="tab"
+        aria-selected="false"
+        aria-controls="blog-content"
+        >Blog</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="h3 nav-link"
+        id="publications-tab"
+        data-toggle="tab"
+        href="#publications-content"
+        role="tab"
+        aria-selected="false"
+        aria-controls="publications-content"
+        >Publications</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="h3 nav-link"
+        id="teaching-tab"
+        data-toggle="tab"
+        href="#teaching-content"
+        role="tab"
+        aria-selected="false"
+        aria-controls="teaching-content"
+        >Teaching</a
+      >
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="projects-content"
+      role="tabpanel"
+      aria-labelledby="projects-tab"
+    >
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <div
+            class="nav flex-column nav-pills"
+            id="projects-nav"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              class="h4 nav-link active"
+              id="sim2real"
+              data-toggle="list"
+              href="#list-sim2real"
+              role="tab"
+              aria-controls="sim2real"
+              >Sim2Real</a
+            >
+            <a
+              class="h4 nav-link"
+              id="tellina"
+              data-toggle="list"
+              href="#list-tellina"
+              role="tab"
+              aria-controls="tellina"
+              >Tellina</a
+            >
+            <a
+              class="h4 nav-link"
+              id="syntactic-entailment"
+              data-toggle="list"
+              href="#list-syntactic-entailment"
+              role="tab"
+              aria-controls="syntactic-entailment"
+              >Syntactic Entailment</a
+            >
+          </div>
+        </div>
+        <div class="col-md-9 text-center">
+          <div class="tab-content">
+            <div
+              class="tab-pane fade"
+              id="list-syntactic-entailment"
+              role="tabpanel"
+              aria-labelledby="syntactic-entailment"
+            >
+              <h4>
+                Improving natural language inference with syntactic word
+                representations.
+              </h4>
+              <a
+                href="https://arxiv.org/abs/1909.08217"
+                class="btn btn-outline-primary"
+                >Paper</a
+              >
+              <a
+                href="https://github.com/pderichai/syntactic-entailment"
+                class="btn btn-outline-primary"
+                >Code</a
+              >
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-tellina"
+              role="tabpanel"
+              aria-labelledby="tellina"
+            >
+              <h4>
+                Translates English sentences into Bash commands using deep
+                learning.
+              </h4>
+              <div class="row mt-4 mb-4 justify-content-center">
+                <div class="input-group col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tellina-search-bar"
+                    placeholder='Try it! Ex: "delete all pdf files"'
+                    aria-label="Search on Tellina"
+                    aria-describedby="tellina-search-button"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-primary"
+                      id="tellina-search-button"
+                      onclick="location.href='http://kirin.cs.washington.edu:8000/translate?request_str='+getElementById('tellina-search-bar').value;"
+                    >
+                      <img
+                        id="tellina-search-button-logo"
+                        src="img/tellina_avatar.svg"
+                        alt="Tellina Logo"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="assets/pubs/tellina_tr170510.pdf"
+                class="btn btn-outline-primary"
+                >Paper</a
+              >
+              <a
+                href="https://github.com/TellinaTool/tellina"
+                class="btn btn-outline-primary"
+                >Code</a
+              >
+            </div>
+            <div
+              class="tab-pane fade show active"
+              id="list-sim2real"
+              role="tabpanel"
+              aria-labelledby="sim2real"
+            >
+              <h4>
+                Training a rover to navigate an indoor office environment
+                with a simulator.
+              </h4>
+              <div class="row mt-4 mb-4">
+                <iframe
+                  class="mx-auto rounded"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/pqFGZB8KCnQ?controls=0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <a
+                href="assets/projects/sim2real/handout.pdf"
+                class="btn btn-outline-primary"
+                >Talk</a
+              >
+              <a
+                href="https://github.com/NVIDIA-Jetson/redtail"
+                class="btn btn-outline-primary"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="blog-content"
+      role="tabpanel"
+      aria-labelledby="blog-tab"
+    >
+      <div class="list-group list-group-flush">
+        {% for post in site.posts %}
+        <div class="card list-group-item">
+          <div class="card-body">
+              <a class="h4 card-title" href="{{ post.url }}">{{ post.title }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="publications-content"
+      role="tabpanel"
+      aria-labelledby="publications-tab"
+    >
+      <div class="list-group list-group-flush">
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              Improving Natural Language Inference with a Pretrained Parser
+            </h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Preprint &amp; Master's thesis, University of Washington, 2019
+            </h5>
+            <p class="card-text">Deric Pang, Lucy H. Lin, Noah A. Smith</p>
+            <a href="https://arxiv.org/abs/1909.08217" class="card-link"
+              >arXiv</a
+            >
+            <a href="assets/pubs/ms_thesis.pdf" class="card-link">Thesis</a>
+          </div>
+        </div>
+
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              Program Synthesis from Natural Language Using Recurrent Neural
+              Networks
+            </h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Technical report, University of Washington, 2017
+            </h5>
+            <p class="card-text">
+              Xi Victoria Lin, Chenglong Wang, Deric Pang, Kevin Vu, Luke
+              Zettlemoyer, and Michael D. Ernst
+            </p>
+            <a href="assets/pubs/tellina_tr170510.pdf" class="card-link"
+              >PDF</a
+            >
+          </div>
+        </div>
+
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              Evaluating and improving fault localization
+            </h4>
+            <h5 class="card-subtitle mb-2 text-muted">ICSE 2017</h5>
+            <p class="card-text">
+              Spencer Pearson, Jos&eacute; Campos, Ren&eacute; Just, Gordon
+              Fraser, Rui Abreu, Michael D. Ernst, Deric Pang, and Benjamin
+              Keller
+            </p>
+            <a
+              href="assets/pubs/fault-localization-icse2017.pdf"
+              class="card-link"
+              >PDF</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="teaching-content"
+      role="tabpanel"
+      aria-labelledby="teaching-tab"
+    >
+      <div class="list-group list-group-flush">
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">Machine Learning</h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Teaching Assistant
+            </h5>
+            <a
+              href="https://courses.cs.washington.edu/courses/cse446/19sp/"
+              class="card-link"
+              >Spring 2019</a
+            >
+            <a
+              href="https://courses.cs.washington.edu/courses/cse446/17au/"
+              class="card-link"
+              >Autumn 2017</a
+            >
+            <a
+              href="https://courses.cs.washington.edu/courses/cse446/17sp/"
+              class="card-link"
+              >Spring 2017</a
+            >
+          </div>
+        </div>
+
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">Natural Language Processing</h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Teaching Assistant
+            </h5>
+            <a
+              href="https://courses.cs.washington.edu/courses/cse447/19wi/"
+              class="card-link"
+              >Winter 2019</a
+            >
+          </div>
+        </div>
+
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">Computer Programming II</h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Teaching Assistant
+            </h5>
+            <a
+              href="https://courses.cs.washington.edu/courses/cse143/18au/"
+              class="card-link"
+              >Autumn 2018</a
+            >
+          </div>
+        </div>
+
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">Computer Programming I</h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Teaching Assistant
+            </h5>
+            <a
+              href="https://courses.cs.washington.edu/courses/cse142/18sp/"
+              class="card-link"
+              >Spring 2018</a
+            >
+          </div>
+        </div>
+
+        <div class="card list-group-item">
+          <div class="card-body">
+            <h4 class="card-title">Software Design &amp; Implementation</h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              Teaching Assistant
+            </h5>
+            <a
+              href="https://courses.cs.washington.edu/courses/cse331/16wi/"
+              class="card-link"
+              >Winter 2016</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -310,7 +310,14 @@ layout: default
         {% for post in site.posts %}
         <div class="card list-group-item">
           <div class="card-body">
-              <a class="h4 card-title" href="{{ post.url }}">{{ post.title }}</a>
+            <h4><a
+                  class="card-title"
+                  href="{{ post.url }}"
+                  >{{ post.title }}
+              </a></h4>
+            <h5 class="card-subtitle text-muted mb-2">
+              {{ post.date | date_to_string }}
+            </h5>
           </div>
         </div>
         {% endfor %}
@@ -333,9 +340,9 @@ layout: default
               Preprint &amp; Master's thesis, University of Washington, 2019
             </h5>
             <p class="card-text">Deric Pang, Lucy H. Lin, Noah A. Smith</p>
-            <a href="https://arxiv.org/abs/1909.08217" class="card-link"
-              >arXiv</a
-            >
+            <a href="https://arxiv.org/abs/1909.08217" class="card-link">
+              arXiv
+            </a>
             <a href="assets/pubs/ms_thesis.pdf" class="card-link">Thesis</a>
           </div>
         </div>

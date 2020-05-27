@@ -4,12 +4,9 @@ date: 2020-05-26
 layout: blog
 ---
 
-A friend once told me that your dotfiles are the longest continuous project
-you'll work on in your career as a software engineer. While I'm not sure I
-completely agree with that statement (since I'm hoping that someday I'll
-eventually stop tinkering with my Vim config), at some point I realized I was
-putting in an awful amount of work customizing my development environment while
-not being easily able to easily transfer it anywhere else. I wanted to:
+At some point I realized I was putting in an awful amount of work customizing
+my development environment while not being easily able to easily deploy it
+anywhere else. I wanted to:
 
 1. Track changes to my dotfiles.
 2. Backup my dotfiles.

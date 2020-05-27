@@ -165,8 +165,7 @@ Powerline[^2] symbols, check out my Tmux config on
 
 ## Quality of Life Improvements
 
-There's a few little things I configure that make working with Tmux easier.
-Here are some of the things I have in my config:
+There's a few things in my config that make working with Tmux easier:
 
 ```
 # Reload tmux config with <prefix>-r.

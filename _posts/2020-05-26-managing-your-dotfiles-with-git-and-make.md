@@ -24,8 +24,8 @@ Let's start by tracking your `.bashrc`:
 $ mkdir ~/dotfiles
 $ cd ~/dotfiles && git init
 ```
-2. Move your `.bashrc` to `~/dotfiles/`. Make sure to omit the `.` so git can
-   track it:
+2. Move your `.bashrc` to `~/dotfiles/`. Make sure to omit the `.` so it's not
+   hidden in your repo:
 ```shell
 $ mv ~/.bashrc ~/dotfiles/bashrc
 ```
@@ -62,7 +62,7 @@ If you want to add another dotfile, it's super easy. For example, let's add
 your Git config:
 
 1. Move your `.gitconfig` to `~/dotfiles/`. Again, make sure to omit the `.` so
-   git can track it:
+   it's not hidden:
 ```shell
 $ mv ~/.gitconfig ~dotfiles/gitconfig
 ```

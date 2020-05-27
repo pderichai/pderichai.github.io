@@ -5,7 +5,7 @@ layout: blog
 ---
 
 - Table of Contents
-  {:toc}
+{:toc}
 
 ## Introduction
 

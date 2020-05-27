@@ -28,6 +28,14 @@
   }
 }
 
+pre {
+  background-color: #eef;
+}
+
+iframe {
+  border: 0px;
+}
+
 #about-content p {
   font-size: 1.3rem;
 }
@@ -47,21 +55,4 @@
 
 #social-buttons a {
   text-decoration: none;
-}
-
-iframe {
-  border: 0px;
-}
-
-/* Anchor class for fixed-navbar. */
-.anchor {
-  display: block;
-  height: 4rem;
-  margin-top: -4rem;
-  visibility: hidden;
-}
-
-/* Padding for the fixed navbar at top of page. */
-body {
-  padding-top: 3rem;
 }

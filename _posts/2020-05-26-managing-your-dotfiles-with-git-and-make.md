@@ -64,7 +64,7 @@ your Git config:
 1. Move your `.gitconfig` to `~/dotfiles/`. Again, make sure to omit the `.` so
    it's not hidden:
 ```shell
-$ mv ~/.gitconfig ~dotfiles/gitconfig
+$ mv ~/.gitconfig ~/dotfiles/gitconfig
 ```
 2. Update `~/dotfiles/Makefile` to be:
 ```make

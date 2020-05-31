@@ -4,16 +4,17 @@ date: 2020-05-26
 layout: blog
 ---
 
-At some point I realized I was putting in an awful amount of work customizing
+At some point, I realized I was putting in an awful amount of work customizing
 my development environment while not being able to easily deploy it anywhere
-else. I wanted to:
+else. There are a number of tools that exist for this exact purpose, but I've
+found that using Git, Make, and GitHub fullfills all my requirements
+
+I wanted to:
 
 1. Track changes to my dotfiles.
 2. Backup my dotfiles.
 3. Easily install my dotfiles on a new machine.
 
-There are a number of tools that exist for this exact purpose, but I've found
-that using Git, Make, and GitHub fullfills all three of these requirements.
 
 ## Initial Setup
 

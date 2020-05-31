@@ -4,17 +4,13 @@ date: 2020-05-27
 layout: blog
 ---
 
-- Table of Contents
-{:toc}
-
-## Introduction
-
 When I started using Tmux, I was frustrated with its unintuitive defaults and
 how different its keybindings were from Vim. Over time, I pinpointed the things
-that I used the most and made them easier to access.
+that I used the most and made them easier to access. This is a walkthrough on
+how to create a minimal config that will help you become immediately more
+productive with Tmux.
 
-This is a walkthrough on how to create a minimal config that will help you
-become immediately more productive with Tmux. My config choices are subjective
+My config choices are subjective
 so it's probably best to focus on _what_ I'm configuring. With Tmux, it's much
 better to create a small custom config than to copy someone else's wholesale
 since the core pieces of functionality are so easily configurable.

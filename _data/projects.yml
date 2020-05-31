@@ -1,0 +1,60 @@
+- name: Sim2Real
+  active: True
+  tag: sim2real
+  description: Training a rover to navigate an indoor office environment with a simulator.
+  affiliation: NVIDIA
+  links:
+    Talk: /assets/projects/sim2real/handout.pdf
+    Code: https://github.com/pderichai/syntactic-entailment
+  demo: |
+    <div class="row mt-4 mb-4">
+      <iframe
+        class="mx-auto rounded"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/pqFGZB8KCnQ?controls=0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+- name: Tellina
+  tag: tellina
+  description: Translates English sentences into Bash commands using deep learning.
+  affiliation: University of Washington
+  links:
+    Paper: /assets/pubs/tellina_tr170510.pdf
+    Code: https://github.com/TellinaTool/tellina
+  demo: |
+    <div class="row mt-4 mb-4 justify-content-center">
+      <div class="input-group col-6">
+        <input
+          type="text"
+          class="form-control"
+          id="tellina-search-bar"
+          placeholder='Try it! Ex: "delete all pdf files"'
+          aria-label="Search on Tellina"
+          aria-describedby="tellina-search-button"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-primary"
+            id="tellina-search-button"
+          >
+            <img
+              id="tellina-search-button-logo"
+              src="img/tellina_avatar.svg"
+              alt="Tellina Logo"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+- name: Syntactic Entailment
+  tag: syntactic-entailment
+  description: Improving natural language inference with syntactic word representations.
+  affiliation: University of Washington
+  links:
+    Paper: https://arxiv.org/abs/1909.08217
+    Code: https://github.com/pderichai/syntactic-entailment

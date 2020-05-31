@@ -10,13 +10,17 @@
 
   function init() {
     let previouslyContent = document.getElementById("previously-blurbs");
-    previouslyContent.children[previouslyContentIndex].style.display = "inline";
-    previouslyContent.children[previouslyContentIndex].style.opacity = 1;
+    if (previouslyContent) {
+      previouslyContent.children[previouslyContentIndex].style.display = "inline";
+      previouslyContent.children[previouslyContentIndex].style.opacity = 1;
 
-    window.setInterval(showNextPreviouslyContent, PREVIOUSLY_CHANGE_FREQ);
+      window.setInterval(showNextPreviouslyContent, PREVIOUSLY_CHANGE_FREQ);
+    }
 
     let tellinaSearchButton = document.getElementById("tellina-search-button");
-    tellinaSearchButton.addEventListener("click", searchTellina);
+    if (tellinaSearchButton) {
+      tellinaSearchButton.addEventListener("click", searchTellina);
+    }
   }
 
   function showNextPreviouslyContent() {

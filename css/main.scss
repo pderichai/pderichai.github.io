@@ -1,3 +1,9 @@
+---
+---
+
+$grey: #828282;
+$light-grey: lighten($grey, 40%);
+
 @media (max-width: 576px) {
   #previously-text {
     height: 8rem;
@@ -28,12 +34,20 @@
   }
 }
 
-pre {
-  background-color: #eef;
-}
-
 iframe {
   border: 0px;
+}
+
+pre {
+  border-style: solid;
+  border-color: #d3d3d3;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+li pre {
+  margin-top: 1rem;
 }
 
 #about-content p {

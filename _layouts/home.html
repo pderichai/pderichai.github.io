@@ -110,7 +110,7 @@ layout: default
                 {{ post.date | date_to_string }}
               </h5>
               <p class="card-text">
-                {{ post.excerpt }}
+                {{ post.subtitle }}
               </p>
             </div>
           </div>
@@ -139,11 +139,11 @@ layout: default
                 {% else %}
                   class="h4 nav-link"
                 {% endif %}
-                id={{ project.name }}
+                id="{{ project.name }}"
                 data-toggle="list"
-                href={{ "#list-" | append: project.tag }}
+                href="{{ "#list-" | append: project.tag }}"
                 role="tab"
-                aria-controls={{ project.tag }}
+                aria-controls="{{ project.tag }}"
                 >{{ project.name }}</a
               >
             {% endfor %}
@@ -158,9 +158,9 @@ layout: default
                 {% else %}
                   class="tab-pane fade"
                 {% endif %}
-                id={{ "list-" | append: project.tag }}
+                id="{{ "list-" | append: project.tag }}"
                 role="tabpanel"
-                aria-labelledby={{ project.tag }}
+                aria-labelledby="{{ project.tag }}"
               >
                 <div class="card">
                   <div class="card-body">
@@ -175,7 +175,7 @@ layout: default
                     </p>
                     {% for link in project.links %}
                       <a
-                        href={{ link[1] }}
+                        href="{{ link[1] }}"
                         class="card-link"
                         target="_blank"
                         >{{ link[0] }}</a
@@ -214,7 +214,7 @@ layout: default
               <p class="card-text">{{ publication.author }}</p>
               {% for link in publication.links %}
                 <a
-                  href={{ link[1] }}
+                  href="{{ link[1] }}"
                   class="card-link"
                   target="_blank"
                   >{{ link[0] }}</a

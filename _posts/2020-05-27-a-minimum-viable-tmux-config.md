@@ -1,19 +1,20 @@
 ---
 title: A Minimum Viable Tmux Config
 date: 2020-05-27
+subtitle: A brief Tmux config walkthrough that will help you become immediately
+  more productive.
 layout: blog
 ---
 
-When I started using Tmux, I was frustrated with its unintuitive defaults and
-how different its keybindings were from Vim. Over time, I pinpointed the things
-that I used the most and made them easier to access. This is a walkthrough on
-how to create a minimal config that will help you become immediately more
-productive with Tmux.
+When I first started using Tmux, I was frustrated with its unintuitive defaults
+and keybindings. Over time, I pinpointed the features that I used the most and
+made them easier to access through better keybindings. I also customized my Tmux
+color scheme and status bar and found several Tmux quality of life improvements.
 
-My config choices are subjective
-so it's probably best to focus on _what_ I'm configuring. With Tmux, it's much
-better to create a small custom config than to copy someone else's wholesale
-since the core pieces of functionality are so easily configurable.
+When going through this walkthrough, it's best to focus on _what_ I'm
+configuring rather than _how_. It's important to create a small custom config
+instead of copying someone else's wholesale since understanding how to extend
+and customize your tools is the key to unlocking their full potential.
 
 ## What can Tmux do?
 

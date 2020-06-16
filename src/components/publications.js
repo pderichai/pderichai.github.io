@@ -1,9 +1,12 @@
 import ListGroup from 'react-bootstrap/ListGroup'
 import { useStaticQuery, graphql } from "gatsby"
 
-import React from "react"
+import React, { useEffect } from "react"
 
 export default function Publications() {
+  const [index, setIndex] = React.useState(0)
+  let start = null
+
   const data = useStaticQuery(graphql`
     query PublicationsQuery {
       allPublicationsYaml {
@@ -18,37 +21,22 @@ export default function Publications() {
 
   const nodes = data.allPublicationsYaml.nodes
 
-  const items = []
-
-  for (const [index, node] of nodes.entries()) {
-    items.push(
-          <div className="card list-group-item">
-            <div className="card-body">
-              <h4 className="card-title">
-                title
-              </h4>
-              <h5 className="card-subtitle mb-2 text-muted">
-                venue
-              </h5>
-              <p className="card-text">author</p>
-            </div>
-          </div>
-    )
-  }
-
   return (
     <ListGroup variant="flush">
+      {nodes.map((node, index) => {
+        return (
           <div className="card list-group-item">
             <div className="card-body">
               <h4 className="card-title">
-                title
+                {node.title}
               </h4>
               <h5 className="card-subtitle mb-2 text-muted">
-                venue
+                {node.venue}
               </h5>
-              <p className="card-text">author</p>
+              <p className="card-text">{node.author}</p>
             </div>
           </div>
+        )})}
     </ListGroup>
   )
 }

@@ -8,6 +8,7 @@ import Image from "react-bootstrap/Image"
 import Nav from "react-bootstrap/Nav"
 import TabContent from 'react-bootstrap/TabContent'
 import TabPane from 'react-bootstrap/TabPane'
+import TabContainer from 'react-bootstrap/TabContainer'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 import Layout from "../components/layout"
@@ -80,19 +81,17 @@ const HomePage = ({data}) => (
     </Container>
 
     <Container>
-      <Nav
-        variant="tabs"
-        defaultActiveKey="#blog-content"
-        className="flex-column flex-md-row"
-        id="tab-menu"
+      <TabContainer
+        defaultActiveKey="blog-content"
       >
+        <Nav
+          variant="tabs"
+          className="flex-column flex-md-row"
+        >
         <Nav.Item>
           <Nav.Link
             className="h3"
-            id="blog-tab"
-            data-toggle="tab"
-            href="#blog-content"
-            role="tab"
+            eventKey="blog-content"
             aria-selected="true"
             aria-controls="blog-content"
           >
@@ -102,172 +101,142 @@ const HomePage = ({data}) => (
         <Nav.Item>
           <Nav.Link
             className="h3"
-            id="projects-tab"
-            data-toggle="tab"
-            href="#projects-content"
-            role="tab"
+            eventKey="projects-content"
             aria-selected="false"
             aria-controls="projects-content"
           >
             Projects
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Nav.Link
-            className="h3"
-            id="publications-tab"
-            data-toggle="tab"
-            href="#publications-content"
-            role="tab"
-            aria-selected="false"
-            aria-controls="publications-content"
+          <Nav.Item>
+            <Nav.Link
+              className="h3"
+              eventKey="publications-content"
+              aria-selected="true"
+              aria-controls="publications-content"
+            >
+              Publications
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+
+        <TabContent>
+          <TabPane
+            eventKey="blog-content"
+            aria-labelledby="blog-tab"
           >
-            Publications
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-
-      <TabContent>
-        <TabPane
-          active="true"
-          id="blog-content"
-          aria-labelledby="blog-tab"
-        >
-          <div className="list-group list-group-flush">
-            {/*
-            {% for post in site.posts %}
-              <div className="card list-group-item">
-                <div className="card-body">
-                  <h4>
-                    <a
-                      className="card-title" href="{{ post.url }}"
-                      >{{ post.title }}</a
-                    >
-                  </h4>
-                  <h5 className="card-subtitle text-muted mb-2">
-                    {{ post.date | date_to_string }}
-                  </h5>
-                  <p className="card-text">
-                    {{ post.subtitle }}
-                  </p>
-                </div>
-              </div>
-            {% endfor %}
-            */}
-          </div>
-        </TabPane>
-
-        <TabPane
-          id="projects-content"
-          aria-labelledby="projects-tab"
-        >
-          <div className="row mt-4">
-            <div className="col-md-3">
-              <div
-                className="nav flex-column nav-pills"
-                id="projects-nav"
-                role="tablist"
-                aria-orientation="vertical"
-              >
-                {/*
-                {% for project in site.data.projects %}
-                  <a
-                    {% if project.active %}
-                      className="h4 nav-link active"
-                    {% else %}
-                      className="h4 nav-link"
-                    {% endif %}
-                    id="{{ project.name }}"
-                    data-toggle="list"
-                    href="{{ "#list-" | append: project.tag }}"
-                    role="tab"
-                    aria-controls="{{ project.tag }}"
-                    >{{ project.name }}</a
-                  >
-                {% endfor %}
-                */}
-              </div>
-            </div>
-            <div className="col-md-9">
-              <div className="tab-content">
-                {/*
-                {% for project in site.data.projects %}
-                  <div
-                    {% if project.active %}
-                      className="tab-pane fade show active"
-                    {% else %}
-                      className="tab-pane fade"
-                    {% endif %}
-                    id="{{ "list-" | append: project.tag }}"
-                    role="tabpanel"
-                    aria-labelledby="{{ project.tag }}"
-                  >
-                    <div className="card">
-                      <div className="card-body">
-                        <h4 className="card-title">
-                          {{ project.name }}
-                        </h4>
-                        <h5 className="card-subtitle mb-2 text-muted">
-                          {{ project.description }}
-                        </h5>
-                        <p className="card-text">
-                          Work done at {{ project.affiliation }}.
-                        </p>
-                        {% for link in project.links %}
-                          <a
-                            href="{{ link[1] }}"
-                            className="card-link"
-                            target="_blank"
-                            >{{ link[0] }}</a
-                          >
-                        {% endfor %}
-                        {% if project.demo %}
-                          <hr/>
-                          <h5 className="card-subtitle mb-2 text-muted">Demo</h5>
-                          {{ project.demo }}
-                        {% endif %}
-                      </div>
-                    </div>
+            <div className="list-group list-group-flush">
+              {/*
+              {% for post in site.posts %}
+                <div className="card list-group-item">
+                  <div className="card-body">
+                    <h4>
+                      <a
+                        className="card-title" href="{{ post.url }}"
+                        >{{ post.title }}</a
+                      >
+                    </h4>
+                    <h5 className="card-subtitle text-muted mb-2">
+                      {{ post.date | date_to_string }}
+                    </h5>
+                    <p className="card-text">
+                      {{ post.subtitle }}
+                    </p>
                   </div>
-                {% endfor %}
-                */}
-              </div>
+                </div>
+              {% endfor %}
+              */}
             </div>
-          </div>
-        </TabPane>
+          </TabPane>
 
-        <TabPane
-          id="publications-content"
-          aria-labelledby="publications-tab"
-        >
-          <Publications />
-            {/*
-          <ListGroup variant="flush">
-            {% for publication in site.data.publications %}
-              <div className="card list-group-item">
-                <div className="card-body">
-                  <h4 className="card-title">
-                    {{ publication.title }}
-                  </h4>
-                  <h5 className="card-subtitle mb-2 text-muted">
-                    {{ publication.venue }}
-                  </h5>
-                  <p className="card-text">{{ publication.author }}</p>
-                  {% for link in publication.links %}
+          <TabPane
+            eventKey="projects-content"
+            aria-labelledby="projects-tab"
+          >
+            <div className="row mt-4">
+              <div className="col-md-3">
+                <div
+                  className="nav flex-column nav-pills"
+                  id="projects-nav"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  {/*
+                  {% for project in site.data.projects %}
                     <a
-                      href="{{ link[1] }}"
-                      className="card-link"
-                      target="_blank"
-                      >{{ link[0] }}</a
+                      {% if project.active %}
+                        className="h4 nav-link active"
+                      {% else %}
+                        className="h4 nav-link"
+                      {% endif %}
+                      id="{{ project.name }}"
+                      data-toggle="list"
+                      href="{{ "#list-" | append: project.tag }}"
+                      role="tab"
+                      aria-controls="{{ project.tag }}"
+                      >{{ project.name }}</a
                     >
                   {% endfor %}
+                  */}
                 </div>
               </div>
-            {% endfor %}
-          </ListGroup>
-            */}
-        </TabPane>
-      </TabContent>
+              <div className="col-md-9">
+                <TabContent>
+                  {/*
+                  {% for project in site.data.projects %}
+                    <div
+                      {% if project.active %}
+                        className="tab-pane fade show active"
+                      {% else %}
+                        className="tab-pane fade"
+                      {% endif %}
+                      id="{{ "list-" | append: project.tag }}"
+                      role="tabpanel"
+                      aria-labelledby="{{ project.tag }}"
+                    >
+                      <div className="card">
+                        <div className="card-body">
+                          <h4 className="card-title">
+                            {{ project.name }}
+                          </h4>
+                          <h5 className="card-subtitle mb-2 text-muted">
+                            {{ project.description }}
+                          </h5>
+                          <p className="card-text">
+                            Work done at {{ project.affiliation }}.
+                          </p>
+                          {% for link in project.links %}
+                            <a
+                              href="{{ link[1] }}"
+                              className="card-link"
+                              target="_blank"
+                              >{{ link[0] }}</a
+                            >
+                          {% endfor %}
+                          {% if project.demo %}
+                            <hr/>
+                            <h5 className="card-subtitle mb-2 text-muted">Demo</h5>
+                            {{ project.demo }}
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                  */}
+                </TabContent>
+              </div>
+            </div>
+          </TabPane>
+          <TabPane
+            eventKey="publications-content"
+            //aria-labelledby="publications-tab"
+          >
+            <Publications />
+          </TabPane>
+        </TabContent>
+      </TabContainer>
     </Container>
   </Layout>
 )
+
+export default HomePage

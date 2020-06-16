@@ -1,5 +1,5 @@
 - title: Improving Natural Language Inference with a Pretrained Parser
-  venue: Preprint &amp; Master's thesis, University of Washington, 2019
+  venue: Preprint & Master's thesis, University of Washington, 2019
   author: Deric Pang, Lucy H. Lin, Noah A. Smith
   links:
     arXiv: https://arxiv.org/abs/1909.08217
@@ -13,6 +13,6 @@
 
 - title: Evaluating and improving fault localization
   venue: ICSE 2017
-  author: Spencer Pearson, Jos&eacute; Campos, Ren&eacute; Just, Gordon Fraser, Rui Abreu, Michael D. Ernst, Deric Pang, and Benjamin Keller
+  author: Spencer Pearson, José Campos, René Just, Gordon Fraser, Rui Abreu, Michael D. Ernst, Deric Pang, and Benjamin Keller
   links:
     PDF: /assets/pubs/fault-localization-icse2017.pdf

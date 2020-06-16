@@ -1,7 +1,5 @@
 .DS_Store
-tags
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-Gemfile.lock
+.cache/
+public/
+node_modules/
+.prettier*

@@ -1,6 +1,3 @@
----
----
-
 $grey: #828282;
 $light-grey: lighten($grey, 40%);
 
@@ -55,7 +52,6 @@ li pre {
 }
 
 #previously-blurbs span {
-  display: none;
   opacity: 0;
 }
 
@@ -67,6 +63,20 @@ li pre {
   font-size: 1.3rem;
 }
 
-#social-buttons a {
-  text-decoration: none;
+.blurb-enter {
+  opacity: 0.01;
+}
+
+.blurb-enter.blurb-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in 300ms;
+}
+
+.blurb-leave {
+  opacity: 1;
+}
+
+.blurb-leave.blurb-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

@@ -62,21 +62,3 @@ li pre {
 #projects-list {
   font-size: 1.3rem;
 }
-
-.blurb-enter {
-  opacity: 0.01;
-}
-
-.blurb-enter.blurb-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in 300ms;
-}
-
-.blurb-leave {
-  opacity: 1;
-}
-
-.blurb-leave.blurb-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}

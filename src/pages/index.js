@@ -1,31 +1,26 @@
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import PreviouslyBlurbs from "../components/previouslyBlurbs"
+import Publications from "../components/publications"
+import Projects from "../components/projects"
+import profile from "../assets/images/profile.jpg"
+import resume from "../assets/pdfs/resume.pdf"
+
+
 import React from "react"
 import { Helmet } from "react-helmet"
-import { Link } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Image from "react-bootstrap/Image"
 import Nav from "react-bootstrap/Nav"
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
-import TabContainer from 'react-bootstrap/TabContainer'
-import ListGroup from 'react-bootstrap/ListGroup'
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PreviouslyBlurbs from "../components/previously-blurbs"
-import Publications from "../components/publications"
-import profile from "../images/profile.jpg"
-import resume from "../assets/resume.pdf"
-
-import { FaTwitter } from "react-icons/fa"
-import { FaLinkedin } from "react-icons/fa"
-import { FaGithub } from "react-icons/fa"
+import Tab from 'react-bootstrap/Tab'
 import { IconContext } from "react-icons"
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
-import "bootstrap/dist/css/bootstrap.min.css"
-
-const HomePage = ({data}) => (
+const HomePage = () => (
   <Layout>
     <SEO title="Home" />
     <Helmet>
@@ -46,7 +41,7 @@ const HomePage = ({data}) => (
               commonsense knowledge and reasoning. I'm interested in natural
               language processing, machine learning, and software engineering.
               Here's my{" "}
-              <a href={resume} target="_blank">
+              <a href={resume}>
                 resume
               </a>
               .
@@ -79,17 +74,18 @@ const HomePage = ({data}) => (
         </Col>
       </Row>
     </Container>
-
     <Container>
-      <TabContainer
+      <Tab.Container
         defaultActiveKey="blog-content"
       >
         <Nav
+          justify
           variant="tabs"
           className="flex-column flex-md-row"
         >
         <Nav.Item>
           <Nav.Link
+            id="blog-tab"
             className="h3"
             eventKey="blog-content"
             aria-selected="true"
@@ -100,6 +96,7 @@ const HomePage = ({data}) => (
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
+            id="projects-tab"
             className="h3"
             eventKey="projects-content"
             aria-selected="false"
@@ -110,6 +107,7 @@ const HomePage = ({data}) => (
         </Nav.Item>
           <Nav.Item>
             <Nav.Link
+              id="publications-tab"
               className="h3"
               eventKey="publications-content"
               aria-selected="true"
@@ -120,8 +118,9 @@ const HomePage = ({data}) => (
           </Nav.Item>
         </Nav>
 
-        <TabContent>
-          <TabPane
+        <Tab.Content>
+          <Tab.Pane
+            id="blog-content"
             eventKey="blog-content"
             aria-labelledby="blog-tab"
           >
@@ -147,94 +146,24 @@ const HomePage = ({data}) => (
               {% endfor %}
               */}
             </div>
-          </TabPane>
+          </Tab.Pane>
 
-          <TabPane
+          <Tab.Pane
+            id="projects-content"
             eventKey="projects-content"
             aria-labelledby="projects-tab"
           >
-            <div className="row mt-4">
-              <div className="col-md-3">
-                <div
-                  className="nav flex-column nav-pills"
-                  id="projects-nav"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  {/*
-                  {% for project in site.data.projects %}
-                    <a
-                      {% if project.active %}
-                        className="h4 nav-link active"
-                      {% else %}
-                        className="h4 nav-link"
-                      {% endif %}
-                      id="{{ project.name }}"
-                      data-toggle="list"
-                      href="{{ "#list-" | append: project.tag }}"
-                      role="tab"
-                      aria-controls="{{ project.tag }}"
-                      >{{ project.name }}</a
-                    >
-                  {% endfor %}
-                  */}
-                </div>
-              </div>
-              <div className="col-md-9">
-                <TabContent>
-                  {/*
-                  {% for project in site.data.projects %}
-                    <div
-                      {% if project.active %}
-                        className="tab-pane fade show active"
-                      {% else %}
-                        className="tab-pane fade"
-                      {% endif %}
-                      id="{{ "list-" | append: project.tag }}"
-                      role="tabpanel"
-                      aria-labelledby="{{ project.tag }}"
-                    >
-                      <div className="card">
-                        <div className="card-body">
-                          <h4 className="card-title">
-                            {{ project.name }}
-                          </h4>
-                          <h5 className="card-subtitle mb-2 text-muted">
-                            {{ project.description }}
-                          </h5>
-                          <p className="card-text">
-                            Work done at {{ project.affiliation }}.
-                          </p>
-                          {% for link in project.links %}
-                            <a
-                              href="{{ link[1] }}"
-                              className="card-link"
-                              target="_blank"
-                              >{{ link[0] }}</a
-                            >
-                          {% endfor %}
-                          {% if project.demo %}
-                            <hr/>
-                            <h5 className="card-subtitle mb-2 text-muted">Demo</h5>
-                            {{ project.demo }}
-                          {% endif %}
-                        </div>
-                      </div>
-                    </div>
-                  {% endfor %}
-                  */}
-                </TabContent>
-              </div>
-            </div>
-          </TabPane>
-          <TabPane
+            <Projects />
+          </Tab.Pane>
+          <Tab.Pane
+            id="publications-content"
             eventKey="publications-content"
-            //aria-labelledby="publications-tab"
+            aria-labelledby="publications-tab"
           >
             <Publications />
-          </TabPane>
-        </TabContent>
-      </TabContainer>
+          </Tab.Pane>
+        </Tab.Content>
+      </Tab.Container>
     </Container>
   </Layout>
 )

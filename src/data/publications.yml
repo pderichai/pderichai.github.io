@@ -1,18 +1,19 @@
 - title: Improving Natural Language Inference with a Pretrained Parser
-  venue: Preprint & Master's thesis, University of Washington, 2019
+  venue: arXiv Preprint, 2019
   author: Deric Pang, Lucy H. Lin, Noah A. Smith
-  links:
-    arXiv: https://arxiv.org/abs/1909.08217
-    Thesis: /assets/pubs/ms_thesis.pdf
+  pdf_link: https://arxiv.org/pdf/1909.08217.pdf
+
+- title: Improving Natural Language Inference with a Syntactic Word Embeddings
+  venue: Master's Thesis, University of Washington, 2019
+  author: Deric Pang, Lucy H. Lin, Noah A. Smith
+  pdf_name: ms-thesis
 
 - title: Program Synthesis from Natural Language Using Recurrent Neural Networks
-  venue: Technical report, University of Washington, 2017
+  venue: Technical Report, University of Washington, 2017
   author: Xi Victoria Lin, Chenglong Wang, Deric Pang, Kevin Lu, Luke Zettlemoyer, Michael D. Ernst
-  links:
-    PDF: /assets/pubs/tellina_tr170510.pdf
+  pdf_name: tellina-tr170510
 
 - title: Evaluating and improving fault localization
   venue: ICSE 2017
   author: Spencer Pearson, José Campos, René Just, Gordon Fraser, Rui Abreu, Michael D. Ernst, Deric Pang, and Benjamin Keller
-  links:
-    PDF: /assets/pubs/fault-localization-icse2017.pdf
+  pdf_name: fault-localization-icse2017

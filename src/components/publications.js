@@ -1,42 +1,63 @@
-import ListGroup from 'react-bootstrap/ListGroup'
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-import React, { useEffect } from "react"
+import ListGroup from "react-bootstrap/ListGroup"
+import Card from "react-bootstrap/Card"
 
 export default function Publications() {
-  const [index, setIndex] = React.useState(0)
-  let start = null
-
   const data = useStaticQuery(graphql`
     query PublicationsQuery {
       allPublicationsYaml {
         nodes {
-          author
           title
+          author
           venue
+          pdf_link
+          pdf_name
+        }
+      }
+      allFile(filter: { sourceInstanceName: { eq: "pdfs" } }) {
+        edges {
+          node {
+            name
+            publicURL
+          }
         }
       }
     }
   `)
-
-  const nodes = data.allPublicationsYaml.nodes
+  const publications = data.allPublicationsYaml.nodes
+  const pdfNamesByLinks = data.allFile.edges.reduce((map, edge) => {
+    map[edge.node.name] = edge.node.publicURL
+    return map
+  }, {})
 
   return (
     <ListGroup variant="flush">
-      {nodes.map((node, index) => {
+      {publications.map(publication => {
         return (
-          <div className="card list-group-item">
-            <div className="card-body">
-              <h4 className="card-title">
-                {node.title}
+          <ListGroup.Item key={publication.title}>
+            <Card.Body>
+              <Card.Title>
+              <h4>
+                <a
+                  href={
+                    publication.pdf_link
+                      ? publication.pdf_link
+                      : pdfNamesByLinks[publication.pdf_name]
+                  }
+                >
+                  {publication.title}
+                </a>
               </h4>
+              </Card.Title>
               <h5 className="card-subtitle mb-2 text-muted">
-                {node.venue}
+                {publication.venue}
               </h5>
-              <p className="card-text">{node.author}</p>
-            </div>
-          </div>
-        )})}
+              <p className="card-text">{publication.author}</p>
+            </Card.Body>
+          </ListGroup.Item>
+        )
+      })}
     </ListGroup>
   )
 }

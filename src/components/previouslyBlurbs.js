@@ -1,11 +1,8 @@
-import { useStaticQuery, graphql } from "gatsby"
-
 import React, { useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default function PreviouslyBlurbs() {
   const [index, setIndex] = React.useState(0)
-  let start = null
-
   const data = useStaticQuery(graphql`
     query PreviouslyBlurbsQuery {
       allPreviouslyBlurbsYaml {
@@ -15,8 +12,9 @@ export default function PreviouslyBlurbs() {
       }
     }
   `)
+  const blurbs = data.allPreviouslyBlurbsYaml.nodes
 
-  const nodes = data.allPreviouslyBlurbsYaml.nodes
+  let start = null
 
   function fadeOutTextStep(timestamp) {
     if (!start) start = timestamp
@@ -27,7 +25,7 @@ export default function PreviouslyBlurbs() {
       window.requestAnimationFrame(fadeOutTextStep)
     } else {
       start = null
-      setIndex(index => (index + 1) % nodes.length)
+      setIndex(index => (index + 1) % blurbs.length)
       window.requestAnimationFrame(fadeInTextStep)
     }
   }
@@ -60,7 +58,7 @@ export default function PreviouslyBlurbs() {
       <span
         id="previously-blurb"
         dangerouslySetInnerHTML={{
-          __html: nodes[index % nodes.length].content,
+          __html: blurbs[index % blurbs.length].content,
         }}
       />
     </p>

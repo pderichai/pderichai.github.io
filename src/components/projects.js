@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col"
 import Tab from "react-bootstrap/Tab"
 import Nav from "react-bootstrap/Nav"
 import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 
 export default function Projects() {
   const data = useStaticQuery(graphql`
@@ -15,9 +16,10 @@ export default function Projects() {
           description
           tag
           affiliation
-          links {
-            code
-          }
+          paper_link
+          paper_name
+          slides_name
+          code_link
           demo
         }
       }
@@ -73,7 +75,6 @@ export default function Projects() {
                   id={project.tag}
                   aria-labelledby={project.name}
                 >
-                  <Card>
                     <Card.Body>
                       <Card.Title>
                         <h4>{project.name}</h4>
@@ -82,6 +83,17 @@ export default function Projects() {
                         <h5>{project.description}</h5>
                       </Card.Subtitle>
                       <Card.Text>{project.affiliation}</Card.Text>
+                      {project.code_link && (
+                        <Card.Link>
+                          <Button
+                            variant="warning"
+                            size="sm"
+                            href={project.code_link}
+                          >
+                            code
+                          </Button>
+                        </Card.Link>
+                      )}
                       <hr />
                       <Card.Subtitle className="mb-2 text-muted">
                         Demo
@@ -92,7 +104,6 @@ export default function Projects() {
                         }}
                       />
                     </Card.Body>
-                  </Card>
                 </Tab.Pane>
               )
             })}

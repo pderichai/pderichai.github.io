@@ -3,9 +3,8 @@
   tag: sim2real
   description: Training a rover to navigate an indoor office environment with a simulator.
   affiliation: NVIDIA
-  links:
-    talk: /assets/projects/sim2real/handout.pdf
-    code: https://github.com/pderichai/syntactic-entailment
+  slides_name: sim2rela-handout
+  code_link: https://github.com/pderichai/syntactic-entailment
   demo: |
     <div class="row mt-4 mb-4">
       <iframe
@@ -22,9 +21,8 @@
   tag: tellina
   description: Translating plain English into Bash commands using deep learning.
   affiliation: UW Programming Languages and Software Engineering
-  links:
-    paper: /assets/pubs/tellina_tr170510.pdf
-    code: https://github.com/TellinaTool/tellina
+  paper_name: tellina-tr170510
+  code_link: https://github.com/TellinaTool/tellina
   demo: |
     <div class="row mt-4 mb-4 justify-content-center">
       <div class="input-group col-6">
@@ -55,6 +53,5 @@
   tag: syntactic-entailment
   description: Improving natural language inference with syntactic word representations.
   affiliation: UW Natural Language Processing
-  links:
-    paper: https://arxiv.org/abs/1909.08217
-    code: https://github.com/pderichai/syntactic-entailment
+  paper_link: https://arxiv.org/abs/1909.08217
+  code_link: https://github.com/pderichai/syntactic-entailment

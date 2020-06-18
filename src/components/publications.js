@@ -56,14 +56,29 @@ export default function Publications() {
                 {publication.venue}
               </Card.Subtitle>
               <Card.Text>{publication.author}</Card.Text>
-              {publication.code_link && (
+              <Card.Link>
                 <Button
-                  variant="warning"
+                  variant="danger"
                   size="sm"
-                  href={publication.code_link}
+                  href={
+                    publication.pdf_link
+                      ? publication.pdf_link
+                      : pdfNamesByLinks[publication.pdf_name]
+                  }
                 >
-                  code
+                  pdf
                 </Button>
+              </Card.Link>
+              {publication.code_link && (
+                <Card.Link>
+                  <Button
+                    variant="warning"
+                    size="sm"
+                    href={publication.code_link}
+                  >
+                    code
+                  </Button>
+                </Card.Link>
               )}
             </Card.Body>
           </ListGroup.Item>

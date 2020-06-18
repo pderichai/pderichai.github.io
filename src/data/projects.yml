@@ -3,55 +3,21 @@
   tag: sim2real
   description: Training a rover to navigate an indoor office environment with a simulator.
   affiliation: NVIDIA
-  slides_name: sim2rela-handout
+  slides_pdf_name: sim2rela-handout
   code_link: https://github.com/pderichai/syntactic-entailment
-  demo: |
-    <div class="row mt-4 mb-4">
-      <iframe
-        class="mx-auto rounded"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/pqFGZB8KCnQ?controls=0&mute=1"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
+  video_link: https://www.youtube.com/embed/pqFGZB8KCnQ?controls=0&mute=1
 
 - name: Tellina
   tag: tellina
   description: Translating plain English into Bash commands using deep learning.
   affiliation: UW Programming Languages and Software Engineering
-  paper_name: tellina-tr170510
+  paper_pdf_name: tellina-tr170510
   code_link: https://github.com/TellinaTool/tellina
-  demo: |
-    <div class="row mt-4 mb-4 justify-content-center">
-      <div class="input-group col-6">
-        <input
-          type="text"
-          class="form-control"
-          id="tellina-search-bar"
-          placeholder='Try it! Ex: "delete all pdf files"'
-          aria-label="Search on Tellina"
-          aria-describedby="tellina-search-button"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-primary"
-            id="tellina-search-button"
-          >
-            <img
-              id="tellina-search-button-logo"
-              src="img/tellina_avatar.svg"
-              alt="Tellina Logo"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
+  demo_link: http://tellina.rocks
 
 - name: Syntactic Entailment
   tag: syntactic-entailment
   description: Improving natural language inference with syntactic word representations.
   affiliation: UW Natural Language Processing
-  paper_link: https://arxiv.org/abs/1909.08217
+  paper_pdf_link: https://arxiv.org/abs/1909.08217
   code_link: https://github.com/pderichai/syntactic-entailment

@@ -15,6 +15,7 @@
   author: Xi Victoria Lin, Chenglong Wang, Deric Pang, Kevin Lu, Luke Zettlemoyer, Michael D. Ernst
   pdf_name: tellina-tr170510
   code_link: https://github.com/TellinaTool/nl2bash
+  demo_link: http://tellina.rocks
 
 - title: Evaluating and improving fault localization
   venue: ICSE 2017

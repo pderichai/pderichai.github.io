@@ -10,7 +10,6 @@ import resume from "../assets/pdfs/resume.pdf"
 
 
 import React from "react"
-import { Helmet } from "react-helmet"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -23,15 +22,6 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 const HomePage = () => (
   <Layout>
     <SEO title="Home" />
-    <Helmet>
-      <meta charset="utf-8" />
-      <title>Deric's Homepage</title>
-      <meta
-        name="description"
-        content="I'm Deric, and I'm a software engineer at Google."
-      />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Helmet>
     <Container className="mt-4 mb-4">
       <Row>
         <Col className="my-auto">

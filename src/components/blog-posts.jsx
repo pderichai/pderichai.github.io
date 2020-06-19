@@ -1,62 +1,45 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 
 export default function BlogPosts() {
-  //const data = useStaticQuery(graphql`
-  //  query BlogPostsQuery {
-  //  }
-  //`)
+  const data = useStaticQuery(graphql`
+    query blogIndex {
+      allMdx {
+        edges {
+          node {
+            id
+            excerpt
+            frontmatter {
+              title
+              subtitle
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
 
-  return publications.map(publication => {
+  const { edges: posts } = data.allMdx
+
+  return posts.map(({ node: post }) => {
     return (
-      <Card className="my-3" key={publication.title}>
+      <Card className="my-3" key={post.frontmatter.title}>
         <Card.Body>
           <Card.Title>
+            <Link to={post.fields.slug}>
             <h4>
-              <a
-                href={
-                  publication.pdf_link
-                    ? publication.pdf_link
-                    : pdfNamesByLinks[publication.pdf_name]
-                }
-              >
-                {publication.title}
-              </a>
+                {post.frontmatter.title}
             </h4>
+            </Link>
           </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
-            {publication.venue}
+            {post.frontmatter.subtitle}
           </Card.Subtitle>
-          <Card.Text>{publication.author}</Card.Text>
-          <Button
-            className="mr-2"
-            variant="info"
-            size="sm"
-            href={
-              publication.pdf_link
-                ? publication.pdf_link
-                : pdfNamesByLinks[publication.pdf_name]
-            }
-          >
-            pdf
-          </Button>
-          {publication.code_link && (
-            <Button
-              className="mr-2"
-              variant="warning"
-              size="sm"
-              href={publication.code_link}
-            >
-              code
-            </Button>
-          )}
-          {publication.demo_link && (
-            <Button variant="danger" size="sm" href={publication.demo_link}>
-              demo
-            </Button>
-          )}
         </Card.Body>
       </Card>
     )

@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import PreviouslyBlurbs from "../components/previously-blurbs"
 import Publications from "../components/publications"
 import Projects from "../components/projects"
+import BlogPosts from "../components/blog-posts"
 import profile from "../assets/images/profile.jpg"
 import resume from "../assets/pdfs/resume.pdf"
 
@@ -114,28 +115,7 @@ const HomePage = () => (
             eventKey="blog-content"
             aria-labelledby="blog-tab"
           >
-            <div className="list-group list-group-flush">
-              {/*
-              {% for post in site.posts %}
-                <div className="card list-group-item">
-                  <div className="card-body">
-                    <h4>
-                      <a
-                        className="card-title" href="{{ post.url }}"
-                        >{{ post.title }}</a
-                      >
-                    </h4>
-                    <h5 className="card-subtitle text-muted mb-2">
-                      {{ post.date | date_to_string }}
-                    </h5>
-                    <p className="card-text">
-                      {{ post.subtitle }}
-                    </p>
-                  </div>
-                </div>
-              {% endfor %}
-              */}
-            </div>
+            <BlogPosts />
           </Tab.Pane>
 
           <Tab.Pane

@@ -1,38 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: `Deric's Homepage`,
-    description: `I'm Deric, and I'm a software engineer at Google.`,
+    title: `Deric Pang`,
+    description: `I'm Deric, and I'm a software engineer.`,
     author: `@pderichai`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Deric's Homepage`,
-        short_name: `Deric's Homepage`,
+        short_name: `Deric`,
         start_url: `/`,
-        //background_color: `#663399`,
-        //theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,7 +36,13 @@ module.exports = {
         path: `${__dirname}/src/assets/pdfs`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

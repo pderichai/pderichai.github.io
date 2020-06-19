@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
 import Nav from "react-bootstrap/Nav"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const shortcodes = { Link } // Provide common components here
 
@@ -18,7 +20,8 @@ export default function PageTemplate({
   },
 }) {
   return (
-    <>
+    <Layout>
+      <SEO title={mdx.frontmatter.title} />
       <Navbar variant="light" bg="white">
         <Nav className="mr-auto">
           <Nav.Item>
@@ -51,7 +54,7 @@ export default function PageTemplate({
           </MDXProvider>
         </Col>
       </Container>
-    </>
+    </Layout>
   )
 }
 

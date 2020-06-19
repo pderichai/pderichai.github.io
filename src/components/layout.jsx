@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 import "./layout.scss"
 
@@ -24,15 +23,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Helmet>
-      </Helmet>
-      <div>
-        <main>{children}</main>
-        <footer>
-        </footer>
-      </div>
-    </>
+    <div>
+      <main>{children}</main>
+      <footer>
+      </footer>
+    </div>
   )
 }
 

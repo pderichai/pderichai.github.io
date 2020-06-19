@@ -3,7 +3,7 @@
   tag: sim2real
   description: Training a rover to navigate an indoor office environment with a simulator.
   affiliation: NVIDIA
-  slides_pdf_name: sim2rela-handout
+  slides_pdf_name: sim2real-handout
   code_link: https://github.com/pderichai/syntactic-entailment
   video_link: https://www.youtube.com/embed/pqFGZB8KCnQ?controls=0&mute=1
 
@@ -19,5 +19,5 @@
   tag: syntactic-entailment
   description: Improving natural language inference with syntactic word representations.
   affiliation: UW Natural Language Processing
-  paper_pdf_link: https://arxiv.org/abs/1909.08217
+  paper_pdf_link: https://arxiv.org/pdf/1909.08217.pdf
   code_link: https://github.com/pderichai/syntactic-entailment

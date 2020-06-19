@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Card from "react-bootstrap/Card"
+import Row from "react-bootstrap/Row"
 import Button from "react-bootstrap/Button"
 import ListGroup from "react-bootstrap/ListGroup"
 
@@ -43,13 +44,11 @@ export default function Projects() {
         <ListGroup variant="flush">
           <ListGroup.Item>
             <Card.Body>
-              <Card.Title>
-                <h4>{project.name}</h4>
-              </Card.Title>
+              <Card.Title>{project.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                <h5>{project.description}</h5>
+                {project.affiliation}
               </Card.Subtitle>
-              <Card.Text>{project.affiliation}</Card.Text>
+              <Card.Text>{project.description}</Card.Text>
               {(project.paper_pdf_link || project.paper_pdf_name) && (
                 <Button
                   className="mr-2"
@@ -62,6 +61,20 @@ export default function Projects() {
                   }
                 >
                   paper
+                </Button>
+              )}
+              {(project.slides_pdf_link || project.slides_pdf_name) && (
+                <Button
+                  className="mr-2"
+                  variant="success"
+                  size="sm"
+                  href={
+                    project.slides_pdf_link
+                      ? project.slides_pdf_link
+                      : pdfNamesByLinks[project.slides_pdf_name]
+                  }
+                >
+                  slides
                 </Button>
               )}
               {project.code_link && (
@@ -84,17 +97,17 @@ export default function Projects() {
           {project.video_link && (
             <ListGroup.Item>
               <Card.Body>
-                <div class="row mt-4 mb-4">
+                <Row>
                   <iframe
                     title={project.name}
-                    className="mx-auto rounded"
+                    className="mx-auto rounded border-0 "
                     width="560"
                     height="315"
                     src={project.video_link}
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
-                </div>
+                </Row>
               </Card.Body>
             </ListGroup.Item>
           )}

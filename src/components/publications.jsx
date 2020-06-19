@@ -38,17 +38,15 @@ export default function Publications() {
       <Card className="my-3" key={publication.title}>
         <Card.Body>
           <Card.Title>
-            <h4>
-              <a
-                href={
-                  publication.pdf_link
-                    ? publication.pdf_link
-                    : pdfNamesByLinks[publication.pdf_name]
-                }
-              >
-                {publication.title}
-              </a>
-            </h4>
+            <a
+              href={
+                publication.pdf_link
+                  ? publication.pdf_link
+                  : pdfNamesByLinks[publication.pdf_name]
+              }
+            >
+              {publication.title}
+            </a>
           </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
             {publication.venue}

@@ -31,10 +31,6 @@ $light-grey: lighten($grey, 40%);
   }
 }
 
-iframe {
-  border: 0px;
-}
-
 pre {
   border-style: solid;
   border-color: #d3d3d3;
@@ -49,14 +45,6 @@ li pre {
 
 #about-content p {
   font-size: 1.3rem;
-}
-
-#previously-blurbs span {
-  opacity: 0;
-}
-
-#tellina-search-button-logo {
-  height: 1.2rem;
 }
 
 #projects-list {

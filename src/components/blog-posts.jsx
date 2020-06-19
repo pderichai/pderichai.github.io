@@ -1,12 +1,11 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
 
 export default function BlogPosts() {
   const data = useStaticQuery(graphql`
     query blogIndex {
-      allMdx {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             id
@@ -14,6 +13,7 @@ export default function BlogPosts() {
             frontmatter {
               title
               subtitle
+              date(formatString: "MMM D, YYYY")
             }
             fields {
               slug
@@ -28,18 +28,15 @@ export default function BlogPosts() {
 
   return posts.map(({ node: post }) => {
     return (
-      <Card className="my-3" key={post.frontmatter.title}>
+      <Card border="primary" className="my-3" key={post.frontmatter.title}>
         <Card.Body>
           <Card.Title>
-            <Link to={post.fields.slug}>
-            <h4>
-                {post.frontmatter.title}
-            </h4>
-            </Link>
+            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
           </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
-            {post.frontmatter.subtitle}
+            {post.frontmatter.date}
           </Card.Subtitle>
+          <Card.Text>{post.frontmatter.subtitle}</Card.Text>
         </Card.Body>
       </Card>
     )

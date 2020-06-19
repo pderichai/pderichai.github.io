@@ -28,7 +28,7 @@ export default function BlogPosts() {
 
   return posts.map(({ node: post }) => {
     return (
-      <Card border="primary" className="my-3" key={post.frontmatter.title}>
+      <Card className="my-3" key={post.frontmatter.title}>
         <Card.Body>
           <Card.Title>
             <Link to={post.fields.slug}>{post.frontmatter.title}</Link>

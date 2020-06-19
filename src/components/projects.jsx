@@ -42,7 +42,7 @@ export default function Projects() {
     return (
       <Card className="my-3" bg="light" key={project.name}>
         <ListGroup variant="flush">
-          <ListGroup.Item>
+          <ListGroup.Item className="p-0">
             <Card.Body>
               <Card.Title>{project.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
@@ -95,7 +95,7 @@ export default function Projects() {
             </Card.Body>
           </ListGroup.Item>
           {project.video_link && (
-            <ListGroup.Item>
+            <ListGroup.Item className="p-0">
               <Card.Body>
                 <Row>
                   <iframe

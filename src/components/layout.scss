@@ -1,5 +1,4 @@
-$grey: #828282;
-$light-grey: lighten($grey, 40%);
+/* Responsive widths. */
 
 @media (max-width: 576px) {
   #previously-text {
@@ -31,17 +30,22 @@ $light-grey: lighten($grey, 40%);
   }
 }
 
+/* Formatting code blocks. */
+
 pre {
   border-style: solid;
   border-color: #d3d3d3;
   border-width: 1px;
   border-radius: 0.3rem;
   padding: 0.5rem;
+  background-color: #fdf6e3;
 }
 
 li pre {
   margin-top: 1rem;
 }
+
+/* Misc. font size settings. */
 
 #about-content p {
   font-size: 1.3rem;

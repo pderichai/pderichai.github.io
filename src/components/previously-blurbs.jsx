@@ -21,6 +21,7 @@ export default function PreviouslyBlurbs() {
       if (!start) start = timestamp
       var progress = timestamp - start
       let blurb = document.getElementById("previously-blurb")
+      if (!blurb) return
       blurb.style.opacity = 1 - progress / 500
       if (progress < 500) {
         window.requestAnimationFrame(fadeOutTextStep)
@@ -35,6 +36,7 @@ export default function PreviouslyBlurbs() {
       if (!start) start = timestamp
       var progress = timestamp - start
       let blurb = document.getElementById("previously-blurb")
+      if (!blurb) return
       blurb.style.opacity = progress / 500
       if (progress < 500) {
         window.requestAnimationFrame(fadeInTextStep)

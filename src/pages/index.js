@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PreviouslyBlurbs from "../components/previouslyBlurbs"
+import PreviouslyBlurbs from "../components/previously-blurbs"
 import Publications from "../components/publications"
 import Projects from "../components/projects"
 import profile from "../assets/images/profile.jpg"

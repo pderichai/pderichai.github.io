@@ -47,5 +47,6 @@ module.exports = {
         path: `${__dirname}/src/assets/pdfs`,
       },
     },
+    `gatsby-plugin-mdx`,
   ],
 }

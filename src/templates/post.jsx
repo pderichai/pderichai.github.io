@@ -10,6 +10,9 @@ import NavDropdown from "react-bootstrap/NavDropdown"
 import Nav from "react-bootstrap/Nav"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Helmet } from "react-helmet"
+
+import "katex/dist/katex.min.css"
 
 const shortcodes = { Link } // Provide common components here
 

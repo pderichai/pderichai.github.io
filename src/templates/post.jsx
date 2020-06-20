@@ -50,7 +50,7 @@ export default function PageTemplate({
         <Col md={{ span: 8, offset: 2 }}>
           <h1>{mdx.frontmatter.title}</h1>
           <h5 className="text-muted">{mdx.frontmatter.date}</h5>
-          <h4>{mdx.frontmatter.subtitle}</h4>
+          <h4 className="mb-5">{mdx.frontmatter.subtitle}</h4>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>

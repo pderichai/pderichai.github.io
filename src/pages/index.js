@@ -6,15 +6,13 @@ import PreviouslyBlurbs from "../components/previously-blurbs"
 import Publications from "../components/publications"
 import Projects from "../components/projects"
 import BlogPosts from "../components/blog-posts"
-import profile from "../assets/images/profile.jpg"
+import ProfilePic from "../components/profile-pic"
 import resume from "../assets/pdfs/resume.pdf"
-
 
 import React from "react"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import Image from "react-bootstrap/Image"
 import Nav from "react-bootstrap/Nav"
 import Tab from 'react-bootstrap/Tab'
 import { IconContext } from "react-icons"
@@ -27,8 +25,9 @@ const HomePage = () => (
       <Row>
         <Col className="my-auto">
           <div id="about-content">
+            <h3>Hi! I'm Deric.</h3>
             <p className="text-justify">
-              I'm Deric, and I'm a software engineer at Google working on
+              I'm a software engineer at Google working on
               commonsense knowledge and reasoning. I'm interested in natural
               language processing, machine learning, and software engineering.
               Here's my{" "}
@@ -44,13 +43,9 @@ const HomePage = () => (
           </div>
         </Col>
         <Col sm={4} className="text-center">
-          <Image
-            src={profile}
-            fluid
-            roundedCircle
-            className="mb-2"
-            alt="Deric"
-          />
+          <Col lg={{span: 8, offset: 2}} >
+            <ProfilePic />
+          </Col>
           <IconContext.Provider value={{ size: "42" }}>
             <a className="mx-2" href="https://github.com/pderichai">
               <FaGithub />
@@ -65,7 +60,7 @@ const HomePage = () => (
         </Col>
       </Row>
     </Container>
-    <Container>
+    <Container className="mt-5">
       <Tab.Container
         defaultActiveKey="blog-content"
       >

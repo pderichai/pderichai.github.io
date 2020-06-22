@@ -39,7 +39,7 @@ const HomePage = () => (
           </div>
         </Col>
         <Col sm={4} className="text-center">
-          <Col lg={{ span: 8, offset: 2 }}>
+          <Col xl={{ span: 8, offset: 2 }}>
             <ProfilePic />
           </Col>
           <IconContext.Provider value={{ size: "42" }}>

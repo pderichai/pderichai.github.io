@@ -1,6 +1,6 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Card from "react-bootstrap/Card"
+import React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Card from "react-bootstrap/Card";
 
 export default function BlogPosts() {
   const data = useStaticQuery(graphql`
@@ -22,9 +22,9 @@ export default function BlogPosts() {
         }
       }
     }
-  `)
+  `);
 
-  const { edges: posts } = data.allMdx
+  const { edges: posts } = data.allMdx;
 
   return posts.map(({ node: post }) => {
     return (
@@ -39,6 +39,6 @@ export default function BlogPosts() {
           <Card.Text>{post.frontmatter.subtitle}</Card.Text>
         </Card.Body>
       </Card>
-    )
-  })
+    );
+  });
 }

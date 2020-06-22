@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 export default function ProfilePic() {
   const data = useStaticQuery(graphql`
@@ -13,19 +13,19 @@ export default function ProfilePic() {
         }
       }
     }
-  `)
+  `);
   const style = {
-    borderRadius: "5%"
-  }
+    borderRadius: "5%",
+  };
 
   return (
     <div>
       <Img
-        style = {style}
+        style={style}
         fluid={data.file.childImageSharp.fluid}
         alt="Deric"
         className="mb-3"
       />
     </div>
-  )
+  );
 }

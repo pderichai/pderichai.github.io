@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 export default function Publications() {
   const data = useStaticQuery(graphql`
@@ -26,14 +26,14 @@ export default function Publications() {
         }
       }
     }
-  `)
-  const publications = data.allPublicationsYaml.nodes
+  `);
+  const publications = data.allPublicationsYaml.nodes;
   const pdfNamesByLinks = data.allFile.edges.reduce((map, edge) => {
-    map[edge.node.name] = edge.node.publicURL
-    return map
-  }, {})
+    map[edge.node.name] = edge.node.publicURL;
+    return map;
+  }, {});
 
-  return publications.map(publication => {
+  return publications.map((publication) => {
     return (
       <Card className="my-3" key={publication.title}>
         <Card.Body>
@@ -81,6 +81,6 @@ export default function Publications() {
           )}
         </Card.Body>
       </Card>
-    )
-  })
+    );
+  });
 }

@@ -1,9 +1,9 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Card from "react-bootstrap/Card"
-import Row from "react-bootstrap/Row"
-import Button from "react-bootstrap/Button"
-import ListGroup from "react-bootstrap/ListGroup"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 export default function Projects() {
   const data = useStaticQuery(graphql`
@@ -31,14 +31,14 @@ export default function Projects() {
         }
       }
     }
-  `)
-  const projects = data.allProjectsYaml.nodes
+  `);
+  const projects = data.allProjectsYaml.nodes;
   const pdfNamesByLinks = data.allFile.edges.reduce((map, edge) => {
-    map[edge.node.name] = edge.node.publicURL
-    return map
-  }, {})
+    map[edge.node.name] = edge.node.publicURL;
+    return map;
+  }, {});
 
-  return projects.map(project => {
+  return projects.map((project) => {
     return (
       <Card className="my-3" bg="light" key={project.name}>
         <ListGroup variant="flush">
@@ -113,6 +113,6 @@ export default function Projects() {
           )}
         </ListGroup>
       </Card>
-    )
-  })
+    );
+  });
 }

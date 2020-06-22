@@ -1,19 +1,19 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
-import Container from "react-bootstrap/Container"
-import Col from "react-bootstrap/Col"
-import Navbar from "react-bootstrap/Navbar"
-import NavDropdown from "react-bootstrap/NavDropdown"
-import Nav from "react-bootstrap/Nav"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import { graphql } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Link } from "gatsby";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Nav from "react-bootstrap/Nav";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import "katex/dist/katex.min.css"
+import "katex/dist/katex.min.css";
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link }; // Provide common components here
 
 export default function PageTemplate({
   data: {
@@ -41,7 +41,7 @@ export default function PageTemplate({
                     {post.frontmatter.date}
                   </span>
                 </NavDropdown.Item>
-              )
+              );
             })}
           </NavDropdown>
         </Nav>
@@ -57,7 +57,7 @@ export default function PageTemplate({
         </Col>
       </Container>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -85,4 +85,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

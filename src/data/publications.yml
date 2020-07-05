@@ -6,7 +6,7 @@
 
 - title: Improving Natural Language Inference with a Syntactic Word Embeddings
   venue: Master's Thesis, University of Washington, 2019
-  author: Deric Pang, Lucy H. Lin, Noah A. Smith
+  author: Deric Pang
   pdf_name: ms-thesis
   code_link: https://github.com/pderichai/syntactic-entailment
 

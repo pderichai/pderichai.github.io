@@ -44,11 +44,13 @@ export default function Projects() {
         <ListGroup variant="flush">
           <ListGroup.Item className="p-0">
             <Card.Body>
-              <Card.Title>{project.name}</Card.Title>
+              <Card.Title className="mb-2">{project.name}</Card.Title>
+              <Card.Subtitle className="mb-2">
+                {project.description}
+              </Card.Subtitle>
               <Card.Subtitle className="mb-2 text-muted">
                 {project.affiliation}
               </Card.Subtitle>
-              <Card.Text>{project.description}</Card.Text>
               {(project.paper_pdf_link || project.paper_pdf_name) && (
                 <Button
                   className="mr-2"

@@ -37,7 +37,7 @@ export default function Publications() {
     return (
       <Card className="my-3" key={publication.title}>
         <Card.Body>
-          <Card.Title>
+          <Card.Title className="mb-2">
             <a
               href={
                 publication.pdf_link
@@ -48,10 +48,10 @@ export default function Publications() {
               {publication.title}
             </a>
           </Card.Title>
+          <Card.Subtitle className="mb-2">{publication.author}</Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">
             {publication.venue}
           </Card.Subtitle>
-          <Card.Text>{publication.author}</Card.Text>
           <Button
             className="mr-2"
             variant="info"

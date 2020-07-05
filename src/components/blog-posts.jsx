@@ -30,13 +30,15 @@ export default function BlogPosts() {
     return (
       <Card className="my-3" key={post.frontmatter.title}>
         <Card.Body>
-          <Card.Title>
+          <Card.Title className="mb-2">
             <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
           </Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
+          <Card.Subtitle className="mb-2">
+            {post.frontmatter.subtitle}
+          </Card.Subtitle>
+          <Card.Subtitle className="text-muted">
             {post.frontmatter.date}
           </Card.Subtitle>
-          <Card.Text>{post.frontmatter.subtitle}</Card.Text>
         </Card.Body>
       </Card>
     );

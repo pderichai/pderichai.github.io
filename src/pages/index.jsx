@@ -31,7 +31,7 @@ const HomePage = () => (
             <Row className="mt-4">
               <Col className="my-auto">
                 <div id="about-content">
-                  <h3 className="text-center">Hi! I'm Deric.</h3>
+                  <h1 className="text-center">Hi! I'm Deric.</h1>
                   <p className="text-justify">
                     I'm a software engineer at Google working on commonsense
                     knowledge and reasoning. I'm interested in natural language
@@ -53,7 +53,7 @@ const HomePage = () => (
                 <Nav.Item>
                   <Nav.Link
                     id="publications-tab"
-                    className="h3"
+                    className="h2"
                     eventKey="publications-content"
                     aria-selected="true"
                     aria-controls="publications-content"
@@ -64,7 +64,7 @@ const HomePage = () => (
                 <Nav.Item>
                   <Nav.Link
                     id="projects-tab"
-                    className="h3"
+                    className="h2"
                     eventKey="projects-content"
                     aria-selected="false"
                     aria-controls="projects-content"
@@ -75,7 +75,7 @@ const HomePage = () => (
                 <Nav.Item>
                   <Nav.Link
                     id="blog-tab"
-                    className="h3"
+                    className="h2"
                     eventKey="blog-content"
                     aria-selected="true"
                     aria-controls="blog-content"

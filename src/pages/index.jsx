@@ -48,17 +48,17 @@ const HomePage = () => (
             </Row>
           </Container>
           <Container className="mt-4">
-            <Tab.Container defaultActiveKey="blog-content">
+            <Tab.Container defaultActiveKey="publications-content">
               <Nav justify variant="tabs" className="flex-column flex-md-row">
                 <Nav.Item>
                   <Nav.Link
-                    id="blog-tab"
+                    id="publications-tab"
                     className="h3"
-                    eventKey="blog-content"
+                    eventKey="publications-content"
                     aria-selected="true"
-                    aria-controls="blog-content"
+                    aria-controls="publications-content"
                   >
-                    Blog
+                    Publications
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
@@ -74,13 +74,13 @@ const HomePage = () => (
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link
-                    id="publications-tab"
+                    id="blog-tab"
                     className="h3"
-                    eventKey="publications-content"
+                    eventKey="blog-content"
                     aria-selected="true"
-                    aria-controls="publications-content"
+                    aria-controls="blog-content"
                   >
-                    Publications
+                    Blog
                   </Nav.Link>
                 </Nav.Item>
               </Nav>

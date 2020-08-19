@@ -1,5 +1,6 @@
-import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
+
+import React from "react";
 import Card from "react-bootstrap/Card";
 
 export default function BlogPosts() {

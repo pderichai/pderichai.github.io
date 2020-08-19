@@ -1,6 +1,7 @@
-import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+
 import Img from "gatsby-image";
+import React from "react";
 
 export default function ProfilePic() {
   const data = useStaticQuery(graphql`
@@ -15,7 +16,7 @@ export default function ProfilePic() {
     }
   `);
   const style = {
-    borderRadius: "5%",
+    borderRadius: "50%",
   };
 
   return (

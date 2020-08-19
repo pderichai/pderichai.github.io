@@ -1,5 +1,6 @@
-import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+
+import React from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";

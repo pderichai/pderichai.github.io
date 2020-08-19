@@ -1,15 +1,19 @@
-import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+
+import { Link } from "gatsby";
 import { graphql } from "gatsby";
+
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { Link } from "gatsby";
+
+import React from "react";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
 
 import "katex/dist/katex.min.css";
 
@@ -47,15 +51,17 @@ export default function PageTemplate({
         </Nav>
       </Navbar>
       <Container>
-        <Col md={{ span: 8, offset: 2 }}>
-          <h1>{mdx.frontmatter.title}</h1>
-          <h4>{mdx.frontmatter.subtitle}</h4>
-          <h5 className="text-muted">{mdx.frontmatter.date}</h5>
-          <hr />
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-        </Col>
+        <Row>
+          <Col md={{ span: 8, offset: 2 }}>
+            <h1>{mdx.frontmatter.title}</h1>
+            <h4>{mdx.frontmatter.subtitle}</h4>
+            <h5 className="text-muted">{mdx.frontmatter.date}</h5>
+            <hr />
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer>{mdx.body}</MDXRenderer>
+            </MDXProvider>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   );

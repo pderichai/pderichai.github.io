@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+
+import React, { useEffect } from "react";
 
 export default function PreviouslyBlurbs() {
   const [index, setIndex] = React.useState(0);

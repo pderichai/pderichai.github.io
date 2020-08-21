@@ -33,14 +33,9 @@ const HomePage = () => (
                 <div id="about-content">
                   <h1 className="text-center">Hi! I'm Deric.</h1>
                   <p className="text-justify">
-                    I'm a software engineer at Google working on commonsense
-                    knowledge and reasoning. I'm interested in natural language
-                    processing, machine learning, and software engineering.
-                    Here's my <a href={resume}>resume</a>.
-                  </p>
-                  <p className="text-justify">
-                    Outside of computer science, I enjoy playing violin and
-                    tennis.
+                    I'm a software engineer at Google working on extracting
+                    knowledge from the web. Here's my{" "}
+                    <a href={resume}>resume</a>.
                   </p>
                   <PreviouslyBlurbs />
                 </div>

@@ -63,7 +63,7 @@ export default function Projects() {
                       : pdfNamesByLinks[project.paper_pdf_name]
                   }
                 >
-                  paper
+                  Paper
                 </Button>
               )}
               {(project.slides_pdf_link || project.slides_pdf_name) && (
@@ -77,7 +77,7 @@ export default function Projects() {
                       : pdfNamesByLinks[project.slides_pdf_name]
                   }
                 >
-                  slides
+                  Slides
                 </Button>
               )}
               {project.code_link && (
@@ -87,12 +87,12 @@ export default function Projects() {
                   size="sm"
                   href={project.code_link}
                 >
-                  code
+                  Code
                 </Button>
               )}
               {project.demo_link && (
                 <Button variant="danger" size="sm" href={project.demo_link}>
-                  demo
+                  Demo
                 </Button>
               )}
             </Card.Body>

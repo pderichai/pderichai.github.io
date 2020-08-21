@@ -63,7 +63,7 @@ export default function Publications() {
                 : pdfNamesByLinks[publication.pdf_name]
             }
           >
-            pdf
+            PDF
           </Button>
           {publication.code_link && (
             <Button
@@ -72,12 +72,12 @@ export default function Publications() {
               size="sm"
               href={publication.code_link}
             >
-              code
+              Code
             </Button>
           )}
           {publication.demo_link && (
             <Button variant="danger" size="sm" href={publication.demo_link}>
-              demo
+              Demo
             </Button>
           )}
         </Card.Body>

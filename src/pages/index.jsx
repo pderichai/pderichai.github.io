@@ -32,7 +32,7 @@ const HomePage = () => (
               <Col className="my-auto">
                 <div id="about-content">
                   <h1 className="text-center">Hi! I'm Deric.</h1>
-                  <p className="text-justify">
+                  <p>
                     I'm a software engineer at Google working on extracting
                     knowledge from the web. Here's my{" "}
                     <a href={resume}>resume</a>.

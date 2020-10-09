@@ -34,7 +34,7 @@ const HomePage = () => (
                   <h1 className="text-center">Hi! I'm Deric.</h1>
                   <p>
                     I'm a software engineer at Google working on semantic
-                    parsing for search. Here's my <a href={resume}>resume</a>.
+                    parsing for Search. Here's my <a href={resume}>resume</a>.
                   </p>
                   <PreviouslyBlurbs />
                 </div>

@@ -33,9 +33,8 @@ const HomePage = () => (
                 <div id="about-content">
                   <h1 className="text-center">Hi! I'm Deric.</h1>
                   <p>
-                    I'm a software engineer at Google working on extracting
-                    knowledge from the web. Here's my{" "}
-                    <a href={resume}>resume</a>.
+                    I'm a software engineer at Google working on semantic
+                    parsing for search. Here's my <a href={resume}>resume</a>.
                   </p>
                   <PreviouslyBlurbs />
                 </div>

@@ -55,7 +55,7 @@ export default function PreviouslyBlurbs() {
   }, [blurbs]);
 
   return (
-    <p className="text-left" id="previously-text">
+    <p id="previously-text">
       Previously, I{" "}
       <span
         id="previously-blurb"

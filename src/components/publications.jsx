@@ -53,18 +53,6 @@ export default function Publications() {
           <Card.Subtitle className="mb-2 text-muted">
             {publication.venue}
           </Card.Subtitle>
-          <Button
-            className="mr-2"
-            variant="info"
-            size="sm"
-            href={
-              publication.pdf_link
-                ? publication.pdf_link
-                : pdfNamesByLinks[publication.pdf_name]
-            }
-          >
-            PDF
-          </Button>
           {publication.code_link && (
             <Button
               className="mr-2"

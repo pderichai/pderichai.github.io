@@ -18,7 +18,7 @@ import Tab from "react-bootstrap/Tab";
 
 const HomePage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <Container>
       <Row>
         <Col md={{ span: 8, offset: 2 }}>

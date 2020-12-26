@@ -1,25 +1,40 @@
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-
-import { Link } from "gatsby";
 import { graphql } from "gatsby";
-
+import "katex/dist/katex.min.css";
+import Layout from "../components/layout";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Nav from "react-bootstrap/Nav";
+import SEO from "../components/seo";
 
-import "katex/dist/katex.min.css";
+const MyH1 = (props) => (
+  <h2 className="blog-post" {...props}>
+    {props.children}
+  </h2>
+);
+const MyH2 = (props) => (
+  <h3 className="blog-post" {...props}>
+    {props.children}
+  </h3>
+);
+const MyP = (props) => (
+  <p className="blog-post" {...props}>
+    {props.children}
+  </p>
+);
+const MyPre = (props) => (
+  <pre className="blog-post" {...props}>
+    {props.children}
+  </pre>
+);
 
-const shortcodes = { Link }; // Provide common components here
+const components = {
+  h1: MyH1,
+  h2: MyH2,
+  p: MyP,
+  pre: MyPre,
+};
 
-export default function PageTemplate({
+export default function PostTemplate({
   data: {
     mdx,
     allMdx: { edges: posts },
@@ -28,41 +43,13 @@ export default function PageTemplate({
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} />
-      <Navbar variant="light" bg="white">
-        <Nav className="mr-auto">
-          <Nav.Item>
-            <Nav.Link href="/">&larr; Back</Nav.Link>
-          </Nav.Item>
-          <NavDropdown title="Posts">
-            {posts.map(({ node: post }) => {
-              return (
-                <NavDropdown.Item
-                  key={post.frontmatter.title}
-                  href={post.fields.slug}
-                >
-                  {post.frontmatter.title}
-                  <span className="text-muted ml-3">
-                    {post.frontmatter.date}
-                  </span>
-                </NavDropdown.Item>
-              );
-            })}
-          </NavDropdown>
-        </Nav>
-      </Navbar>
-      <Container>
-        <Row>
-          <Col md={{ span: 8, offset: 2 }}>
-            <h1>{mdx.frontmatter.title}</h1>
-            <h4>{mdx.frontmatter.subtitle}</h4>
-            <h5 className="text-muted">{mdx.frontmatter.date}</h5>
-            <hr />
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </MDXProvider>
-          </Col>
-        </Row>
-      </Container>
+      <main className="blog-post">
+        <h1 className="blog-title">{mdx.frontmatter.title}</h1>
+        <p className="blog-date">{mdx.frontmatter.date}</p>
+        <MDXProvider components={components}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </main>
     </Layout>
   );
 }

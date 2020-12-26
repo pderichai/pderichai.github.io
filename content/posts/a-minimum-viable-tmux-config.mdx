@@ -16,7 +16,7 @@ configuring rather than _how_. It's important to create a small custom config
 instead of copying someone else's wholesale since understanding how to extend
 and customize your tools is the key to unlocking their full potential.
 
-## What can Tmux do?
+# What can Tmux do?
 
 The main pieces of functionality that you will use in Tmux are:
 
@@ -28,12 +28,12 @@ The main pieces of functionality that you will use in Tmux are:
 - Detaching from a remote Tmux session so that you can later pick up where you
   left off with all your windows and panes as you last had them.
 
-## Better Keybindings
+# Better Keybindings
 
 Let's set up better keybindings for the parts of Tmux that we most commonly
 use.
 
-### Tmux Prefix
+## Tmux Prefix
 
 The Tmux prefix is a key chord that is used before all Tmux commands. I've
 gotten used to using the default, which is `C-b` (control followed by "b"
@@ -44,7 +44,7 @@ want to remap the prefix to `C-a`, add this to your `.tmux.conf`:
 bind-key C-a send-prefix
 ```
 
-### Panes
+## Panes
 
 Tmux "panes" are each a separate shell session, and each window holds one or
 more panes. You can add panes to a window in a way that is similar to splitting
@@ -81,7 +81,7 @@ bind-key -r K resize-pane -U 5
 bind-key -r L resize-pane -R 5
 ```
 
-### Windows
+## Windows
 
 Tmux "windows" are like the tabs in a web browser. Each window contains a
 number of "panes", each of which is a separate shell session. The default
@@ -95,7 +95,7 @@ important ones here:
 - Kill the current window with `C-b &`.
 - Kill a particular window with `C-b :kill-window -t [0-9]`.
 
-### Sessions
+## Sessions
 
 Tmux "sessions" are collections of "windows" and "panes". I often have one
 session for each project I'm working on.
@@ -115,7 +115,7 @@ bind-key C-c new-session -c "~"
 bind-key C-f command-prompt -p find-session 'switch-client -t %%'
 ```
 
-## Status Bar & Color Scheme
+# Status Bar & Color Scheme
 
 I really like the Gruvbox[^1] Vim color scheme, so I use a Gruvbox-like color
 scheme in Tmux heavily inspired by
@@ -124,7 +124,7 @@ scheme in Tmux heavily inspired by
 Add the following to your `.tmux.conf`:
 
 ```
-## COLORSCHEME: gruvbox dark
+# COLORSCHEME: gruvbox dark
 set-option -g status "on"
 
 set-option -g status-style bg=colour237,fg=colour223 # bg=bg1, fg=fg1
@@ -160,7 +160,7 @@ If you're interested in a version of the status bar settings that use
 Powerline[^2] symbols, check out my Tmux config on
 [GitHub](https://github.com/pderichai/dotfiles/blob/master/tmux.conf).
 
-## Quality of Life Improvements
+# Quality of Life Improvements
 
 There's a few things in my config that make working with Tmux easier:
 
@@ -192,7 +192,7 @@ set -g monitor-activity on
 set -g visual-activity off
 ```
 
-## Conclusion
+# Conclusion
 
 That basically covers my entire Tmux config, which you can check out on
 [GitHub](https://github.com/pderichai/dotfiles/blob/master/tmux.conf).

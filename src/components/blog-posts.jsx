@@ -1,7 +1,6 @@
 import { Link, useStaticQuery, graphql } from "gatsby";
 
 import React from "react";
-import Card from "react-bootstrap/Card";
 
 export default function BlogPosts() {
   const data = useStaticQuery(graphql`
@@ -27,21 +26,14 @@ export default function BlogPosts() {
 
   const { edges: posts } = data.allMdx;
 
-  return posts.map(({ node: post }) => {
-    return (
-      <Card className="my-3" key={post.frontmatter.title}>
-        <Card.Body>
-          <Card.Title className="mb-2">
-            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-          </Card.Title>
-          <Card.Subtitle className="mb-2">
-            {post.frontmatter.subtitle}
-          </Card.Subtitle>
-          <Card.Subtitle className="text-muted">
-            {post.frontmatter.date}
-          </Card.Subtitle>
-        </Card.Body>
-      </Card>
-    );
-  });
+  return (
+    <ul className="publications-list">
+      {posts.map(({ node: post }) => (
+        <li key={post.frontmatter.title}>
+          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+          <p>{post.frontmatter.date}</p>
+        </li>
+      ))}
+    </ul>
+  );
 }

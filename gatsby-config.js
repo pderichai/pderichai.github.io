@@ -3,6 +3,24 @@ module.exports = {
     title: `Deric Pang`,
     description: `I'm Deric, and I'm a software engineer.`,
     author: `@pderichai`,
+    menuLinks: [
+      {
+        name: "About",
+        link: "/",
+      },
+      {
+        name: "Publications",
+        link: "/publications/",
+      },
+      {
+        name: "Projects",
+        link: "/projects/",
+      },
+      {
+        name: "Blog",
+        link: "/blog/",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,20 +36,13 @@ module.exports = {
         short_name: `Deric`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/icon.png`,
       },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              strict: `ignore`,
-            },
-          },
-        ],
+        remarkPlugins: [require("remark-math"), require("remark-html-katex")],
       },
     },
     {

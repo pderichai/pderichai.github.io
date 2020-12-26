@@ -1,66 +1,184 @@
-/* Responsive widths. */
+// Responsive widths.
+body {
+  margin: 3em 1.5em 1.5em;
+}
 
-@media (max-width: 576px) {
-  #previously-text {
-    height: 8rem;
+@media (min-width: 768px) {
+  body {
+    margin: 7em 7em 3em;
+    width: 60%;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-  #previously-text {
-    height: 6rem;
+// Typography.
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+$inconsolata: "Inconsolata", monospace;
+$font__weight: 400;
+$font__line-height: 1.5;
+
+// Colors.
+$color__black: #000000;
+$color__gray: #eeeeee;
+$color__beige: #f8f8f1;
+$color__yellow: #fefeca;
+
+// Elements.
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $color__black;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color__black;
+    font-weight: bold;
+    text-decoration: none;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #previously-text {
-    height: 6rem;
+// Layout.
+body {
+  background: $color__beige;
+  font-family: $inconsolata;
+  font-weight: $font__weight;
+  line-height: $font__line-height;
+}
+
+.header {
+  margin-bottom: 1.25em;
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #previously-text {
-    height: 4rem;
+nav ul {
+  display: flex;
+  flex: 1;
+  padding: 0;
+}
+
+nav li {
+  padding-right: 0.5rem;
+}
+
+nav,
+footer {
+  ul {
+    padding: 0;
   }
 }
 
-@media (min-width: 1200px) {
-  #previously-text {
-    height: 4rem;
+nav,
+footer {
+  li {
+    list-style-type: none;
   }
 }
 
-/* General settings. */
-
-div a {
-  color: #1a0dab;
+footer {
+  margin-top: 3em;
 }
 
-.nav-item a {
-  color: #212b36;
+.active {
+  font-weight: bold;
 }
 
-/* Formatting code blocks. */
+// publications-list component.
+.publications-list {
+  margin: 0;
+  padding-left: 1rem;
+}
 
-pre {
+.publications-list li {
+  margin-bottom: 1rem;
+}
+
+.publications-list p {
+  margin: 0;
+}
+
+.publications-list a + a {
+  margin-left: 0.5rem;
+}
+
+// projects-list component.
+.projects-list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.projects-list li {
+  margin-bottom: 1rem;
+}
+
+.projects-list p {
+  margin: 0;
+}
+
+.projects-list a + a {
+  margin-left: 0.5rem;
+}
+
+// Blog post template.
+main.blog-post {
+  counter-reset: h2counter;
+}
+
+h1.blog-post {
+  counter-reset: h2counter;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+h2.blog-post {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+h2.blog-post:before {
+  content: counter(h2counter) ".\0000a0\0000a0";
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+
+h3.blog-post {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+h3.blog-post:before {
+  content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+  counter-increment: h3counter;
+}
+
+p.blog-post {
+  text-align: justify;
+}
+
+pre.blog-post {
   border-style: solid;
   border-color: #d3d3d3;
-  border-width: 1px;
+  border-width: 0.06rem;
   border-radius: 0.3rem;
   padding: 0.5rem;
   background-color: #fdf6e3;
 }
 
-li pre {
-  margin-top: 1rem;
+.blog-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 2rem;
 }
 
-/* Misc. font size settings. */
-
-#about-content p {
-  font-size: 1.3rem;
-}
-
-#projects-list {
-  font-size: 1.3rem;
+.blog-date {
+  text-align: center;
 }

@@ -1,31 +1,49 @@
-import PropTypes from "prop-types";
-
-import React from "react";
-import Container from "react-bootstrap/Container";
-import { IconContext } from "react-icons";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./layout.scss";
+
+import { Link } from "gatsby";
+import Navigation from "../components/navigation.jsx";
+import PropTypes from "prop-types";
+import React from "react";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <main>{children}</main>
+      <div className="header">
+        <Link to="/">Deric Pang</Link>
+      </div>
+      <Navigation />
+      {children}
       <footer>
-        <hr />
-        <Container className="mt-4 mb-4 text-center">
-          <IconContext.Provider value={{ size: "42" }}>
-            <a className="mx-2" href="https://github.com/pderichai">
-              <FaGithub />
+        <ul>
+          <li>
+            <a
+              href="https://twitter.com/pderichai"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twitter
             </a>
-            <a className="mx-2" href="https://linkedin.com/in/pderichai">
-              <FaLinkedin />
+          </li>
+          <li>
+            <a
+              href="https://github.com/pderichai"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
             </a>
-            <a className="mx-2" href="https://twitter.com/pderichai">
-              <FaTwitter />
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/pderichai"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
             </a>
-          </IconContext.Provider>
-        </Container>
+          </li>
+        </ul>
       </footer>
     </div>
   );

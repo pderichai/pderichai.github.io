@@ -1,113 +1,68 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import Layout from "../components/layout";
-import SEO from "../components/seo";
-import PreviouslyBlurbs from "../components/previously-blurbs";
-import Publications from "../components/publications";
-import Projects from "../components/projects";
-import BlogPosts from "../components/blog-posts";
-import ProfilePic from "../components/profile-pic";
-import resume from "../assets/pdfs/resume.pdf";
-
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Nav from "react-bootstrap/Nav";
-import Tab from "react-bootstrap/Tab";
+import resume from "../assets/pdfs/resume.pdf";
+import SEO from "../components/seo";
 
 const HomePage = () => (
   <Layout>
     <SEO />
-    <Container>
-      <Row>
-        <Col md={{ span: 8, offset: 2 }}>
-          <Container className="mt-4">
-            <Row>
-              <Col md={{ span: 6, offset: 3 }} className="text-center">
-                <ProfilePic />
-              </Col>
-            </Row>
-            <Row className="mt-4">
-              <Col className="my-auto">
-                <div id="about-content">
-                  <h1 className="text-center">Hi! I'm Deric.</h1>
-                  <p>
-                    I'm a software engineer at Google working on semantic
-                    parsing for Search. Here's my <a href={resume}>resume</a>.
-                  </p>
-                  <PreviouslyBlurbs />
-                </div>
-              </Col>
-            </Row>
-          </Container>
-          <Container className="mt-4">
-            <Tab.Container defaultActiveKey="publications-content">
-              <Nav justify variant="tabs" className="flex-column flex-md-row">
-                <Nav.Item>
-                  <Nav.Link
-                    id="publications-tab"
-                    className="h2"
-                    eventKey="publications-content"
-                    aria-selected="true"
-                    aria-controls="publications-content"
-                  >
-                    Publications
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link
-                    id="projects-tab"
-                    className="h2"
-                    eventKey="projects-content"
-                    aria-selected="false"
-                    aria-controls="projects-content"
-                  >
-                    Projects
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link
-                    id="blog-tab"
-                    className="h2"
-                    eventKey="blog-content"
-                    aria-selected="true"
-                    aria-controls="blog-content"
-                  >
-                    Blog
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
-
-              <Tab.Content>
-                <Tab.Pane
-                  id="blog-content"
-                  eventKey="blog-content"
-                  aria-labelledby="blog-tab"
-                >
-                  <BlogPosts />
-                </Tab.Pane>
-
-                <Tab.Pane
-                  id="projects-content"
-                  eventKey="projects-content"
-                  aria-labelledby="projects-tab"
-                >
-                  <Projects />
-                </Tab.Pane>
-                <Tab.Pane
-                  id="publications-content"
-                  eventKey="publications-content"
-                  aria-labelledby="publications-tab"
-                >
-                  <Publications />
-                </Tab.Pane>
-              </Tab.Content>
-            </Tab.Container>
-          </Container>
-        </Col>
-      </Row>
-    </Container>
+    <main>
+      <p>
+        I'm a software engineer at Google working on semantic parsing and
+        question answering for Search.
+      </p>
+      <p>
+        Prior to Google, I obtained my B.S. and M.S. from the{" "}
+        <a href="https://www.washington.edu/" target="_blank" rel="noreferrer">
+          University of Washington
+        </a>
+        , where I was advised by{" "}
+        <a
+          href="https://homes.cs.washington.edu/~nasmith/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Noah Smith
+        </a>
+        . I've previously worked on{" "}
+        <a
+          href="https://github.com/Unity-Technologies/ml-agents"
+          target="_blank"
+          rel="noreferrer"
+        >
+          machine learning in a game engine
+        </a>{" "}
+        at{" "}
+        <a href="https://unity3d.ai/" target="_blank" rel="noreferrer">
+          Unity Technologies
+        </a>
+        ,{" "}
+        <a
+          href="https://www.youtube.com/watch?v=pqFGZB8KCnQ"
+          target="_blank"
+          rel="noreferrer"
+        >
+          training autonomous robots in simulation
+        </a>{" "}
+        at{" "}
+        <a href="http://www.nvidia.com/" target="_blank" rel="noreferrer">
+          NVIDIA
+        </a>
+        , and a deep learning framework for speech recognition at{" "}
+        <a
+          href="https://www.amazon.jobs/en/teams/alexa-ai/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Amazon Alexa AI
+        </a>
+        . For more details, see my{" "}
+        <a href={resume} target="_blank" rel="noreferrer">
+          resume
+        </a>
+        .
+      </p>
+    </main>
   </Layout>
 );
 

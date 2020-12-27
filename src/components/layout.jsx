@@ -20,15 +20,6 @@ const Layout = ({ children }) => {
         <ul>
           <li>
             <a
-              href="https://twitter.com/pderichai"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
               href="https://github.com/pderichai"
               target="_blank"
               rel="noreferrer"
@@ -38,11 +29,29 @@ const Layout = ({ children }) => {
           </li>
           <li>
             <a
+              href="https://scholar.google.com/citations?user=ktSbCsoAAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Google Scholar
+            </a>
+          </li>
+          <li>
+            <a
               href="https://linkedin.com/in/pderichai"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/pderichai"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twitter
             </a>
           </li>
         </ul>

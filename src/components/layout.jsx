@@ -8,12 +8,14 @@ import React from "react";
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <h1 className="site-header">
-        <Link to="/">Deric Pang</Link>
-      </h1>
+    <>
+      <header>
+        <h1 className="site-header">
+          <Link to="/">Deric Pang</Link>
+        </h1>
+      </header>
       <Navigation />
-      {children}
+      <main>{children}</main>
       <footer>
         <ul>
           <li>
@@ -45,7 +47,7 @@ const Layout = ({ children }) => {
           </li>
         </ul>
       </footer>
-    </div>
+    </>
   );
 };
 

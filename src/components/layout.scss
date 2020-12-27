@@ -125,10 +125,6 @@ footer {
 }
 
 // Blog post template.
-main.blog-post {
-  counter-reset: h3counter;
-}
-
 h2.blog-post {
   counter-reset: h3counter;
   font-size: 1rem;
@@ -173,6 +169,7 @@ pre.blog-post {
 }
 
 .blog-title {
+  counter-reset: h3counter;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;

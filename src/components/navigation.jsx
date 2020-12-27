@@ -20,20 +20,18 @@ export default function Navigation({ separator }) {
   const links = data.site.siteMetadata.menuLinks;
 
   return (
-    <div>
-      <nav>
-        <ul>
-          {links.map((link, index) => (
-            <li key={link.name}>
-              {index !== 0 && separator + " "}
-              <Link to={link.link} activeClassName="active">
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        {links.map((link, index) => (
+          <li key={link.name}>
+            {index !== 0 && separator + " "}
+            <Link to={link.link} activeClassName="active">
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 

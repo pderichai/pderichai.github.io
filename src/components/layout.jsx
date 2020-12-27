@@ -9,9 +9,9 @@ import React from "react";
 const Layout = ({ children }) => {
   return (
     <div>
-      <div className="header">
+      <h1 className="site-header">
         <Link to="/">Deric Pang</Link>
-      </div>
+      </h1>
       <Navigation />
       {children}
       <footer>

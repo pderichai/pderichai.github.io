@@ -7,14 +7,14 @@ import React from "react";
 import SEO from "../components/seo";
 
 const MyH1 = (props) => (
-  <h2 className="blog-post" {...props}>
-    {props.children}
-  </h2>
-);
-const MyH2 = (props) => (
   <h3 className="blog-post" {...props}>
     {props.children}
   </h3>
+);
+const MyH2 = (props) => (
+  <h4 className="blog-post" {...props}>
+    {props.children}
+  </h4>
 );
 const MyP = (props) => (
   <p className="blog-post" {...props}>
@@ -44,7 +44,7 @@ export default function PostTemplate({
     <Layout>
       <SEO title={mdx.frontmatter.title} />
       <main className="blog-post">
-        <h1 className="blog-title">{mdx.frontmatter.title}</h1>
+        <h2 className="blog-title">{mdx.frontmatter.title}</h2>
         <p className="blog-date">{mdx.frontmatter.date}</p>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>

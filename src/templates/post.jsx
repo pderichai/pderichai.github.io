@@ -37,7 +37,6 @@ const components = {
 export default function PostTemplate({
   data: {
     mdx,
-    allMdx: { edges: posts },
   },
 }) {
   return (
@@ -63,19 +62,6 @@ export const pageQuery = graphql`
         title
         subtitle
         date(formatString: "MMM D, YYYY")
-      }
-    }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "MMM D, YYYY")
-          }
-          fields {
-            slug
-          }
-        }
       }
     }
   }

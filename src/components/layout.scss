@@ -1,12 +1,12 @@
 // Responsive widths.
 body {
-  margin: 3em 1.5em 1.5em;
+  margin: 3em 1.5em 0;
+  max-width: 61.25rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 61.25rem) {
   body {
-    margin: 7em 7em 3em;
-    width: 60%;
+    margin: 7em auto 0;
   }
 }
 
@@ -21,6 +21,7 @@ $color__black: #000000;
 $color__gray: #eeeeee;
 $color__beige: #f8f8f1;
 $color__yellow: #fefeca;
+$color__white: #ffffff;
 
 // Elements.
 * {
@@ -40,7 +41,7 @@ a {
 
 // Layout.
 body {
-  background: $color__beige;
+  background: $color__white;
   font-family: $inconsolata;
   font-weight: $font__weight;
   line-height: $font__line-height;
@@ -56,13 +57,8 @@ body {
   }
 }
 
-nav ul {
-  display: flex;
-  flex: 1;
-  padding: 0;
-}
-
 nav li {
+  display: inline;
   padding-right: 0.5rem;
 }
 
@@ -71,10 +67,7 @@ footer {
   ul {
     padding: 0;
   }
-}
 
-nav,
-footer {
   li {
     list-style-type: none;
   }

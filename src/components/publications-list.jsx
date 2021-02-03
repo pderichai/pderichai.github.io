@@ -41,23 +41,13 @@ export default function PublicationsList() {
                 ? publication.pdf_link
                 : pdfNamesByLinks[publication.pdf_name]
             }
-            target="_blank"
-            rel="noreferrer"
           >
             {publication.title}
           </a>
           <p>{publication.author}</p>
           <p>{publication.venue}</p>
-          {publication.code_link && (
-            <a href={publication.code_link} target="_blank" rel="noreferrer">
-              Code
-            </a>
-          )}
-          {publication.demo_link && (
-            <a href={publication.demo_link} target="_blank" rel="noreferrer">
-              Demo
-            </a>
-          )}
+          {publication.code_link && <a href={publication.code_link}>Code</a>}
+          {publication.demo_link && <a href={publication.demo_link}>Demo</a>}
         </li>
       ))}
     </ul>

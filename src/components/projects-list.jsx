@@ -38,9 +38,7 @@ export default function ProjectsList() {
       {projects.map((project) => (
         <li key={project.name}>
           {project.demo_link ? (
-            <a href={project.demo_link} target="_blank" rel="noreferrer">
-              {project.name}
-            </a>
+            <a href={project.demo_link}>{project.name}</a>
           ) : (
             <p>{project.name}</p>
           )}
@@ -52,8 +50,6 @@ export default function ProjectsList() {
                   ? project.paper_pdf_link
                   : pdfNamesByLinks[project.paper_pdf_name]
               }
-              target="_blank"
-              rel="noreferrer"
             >
               Paper
             </a>
@@ -65,17 +61,11 @@ export default function ProjectsList() {
                   ? project.slides_pdf_link
                   : pdfNamesByLinks[project.slides_pdf_name]
               }
-              target="_blank"
-              rel="noreferrer"
             >
               Slides
             </a>
           )}
-          {project.code_link && (
-            <a href={project.code_link} target="_blank" rel="noreferrer">
-              Code
-            </a>
-          )}
+          {project.code_link && <a href={project.code_link}>Code</a>}
         </li>
       ))}
     </ul>

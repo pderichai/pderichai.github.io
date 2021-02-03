@@ -6,15 +6,18 @@ subtitle: A brief Tmux config walkthrough that will help you become immediately
 layout: blog
 ---
 
+TLDR; see my config on
+[GitHub](https://github.com/pderichai/dotfiles/blob/master/tmux.conf).
+
 When I first started using Tmux, I was frustrated with its unintuitive defaults
 and keybindings. Over time, I pinpointed the features that I used the most and
-made them easier to access through better keybindings. I also customized my Tmux
-color scheme and status bar and found several Tmux quality of life improvements.
+made them easier to access through better keybindings. I also customized my
+color scheme and status bar and made several quality of life improvements.
 
 When going through this walkthrough, it's best to focus on _what_ I'm
-configuring rather than _how_. It's important to create a small custom config
-instead of copying someone else's wholesale since understanding how to extend
-and customize your tools is the key to unlocking their full potential.
+configuring rather than _how_. Create a small custom config instead of copying
+someone else's since understanding how to extend and customize your tools is
+the key to unlocking their full potential.
 
 # What can Tmux do?
 
@@ -25,7 +28,7 @@ The main pieces of functionality that you will use in Tmux are:
 - Creating and switching between Tmux "windows" (which are more like tabs),
   each of which contains a number of panes.
 - Creating Tmux sessions which are each a collection of "windows" and "panes".
-- Detaching from a remote Tmux session so that you can later pick up where you
+- Detaching/switch from a Tmux session so that you can later pick up where you
   left off with all your windows and panes as you last had them.
 
 # Better Keybindings

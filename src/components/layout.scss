@@ -161,6 +161,10 @@ pre.blog-post {
   background-color: #fdf6e3;
 }
 
+ol.blog-post {
+  padding-left: 1.5rem;
+}
+
 .blog-title {
   counter-reset: h3counter;
   font-size: 1rem;

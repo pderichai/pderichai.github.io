@@ -26,19 +26,21 @@ const MyPre = (props) => (
     {props.children}
   </pre>
 );
+const MyOl = (props) => (
+  <ol className="blog-post" {...props}>
+    {props.children}
+  </ol>
+);
 
 const components = {
   h1: MyH1,
   h2: MyH2,
   p: MyP,
   pre: MyPre,
+  ol: MyOl,
 };
 
-export default function PostTemplate({
-  data: {
-    mdx,
-  },
-}) {
+export default function PostTemplate({ data: { mdx } }) {
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} />

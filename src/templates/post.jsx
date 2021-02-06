@@ -62,7 +62,6 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        subtitle
         date(formatString: "MMM D, YYYY")
       }
     }

@@ -12,7 +12,6 @@ export default function BlogPosts() {
             excerpt
             frontmatter {
               title
-              subtitle
               date(formatString: "MMM D, YYYY")
             }
             fields {

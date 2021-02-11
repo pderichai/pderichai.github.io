@@ -26,8 +26,28 @@ const HomePage = () => (
       at <a href="http://www.nvidia.com/">NVIDIA</a>, and a deep learning
       framework for speech recognition at{" "}
       <a href="https://www.amazon.jobs/en/teams/alexa-ai/">Amazon Alexa AI</a>.
-      For more details, see my <a href={resume}>resume</a>.
     </p>
+    <div className="about-links">
+      <ul>
+        <li>
+          <a href="https://github.com/pderichai">GitHub</a>
+        </li>
+        <li>
+          <a href="https://scholar.google.com/citations?user=ktSbCsoAAAAJ&hl=en">
+            Google Scholar
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/pderichai">LinkedIn</a>
+        </li>
+        <li>
+          <a href={resume}>Resume</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/pderichai">Twitter</a>
+        </li>
+      </ul>
+    </div>
   </Layout>
 );
 

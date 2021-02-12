@@ -57,10 +57,15 @@ body {
 }
 
 nav li {
-  display: inline;
   margin-right: 1.5rem;
   font-size: 1.25rem;
   font-family: $roboto_mono;
+}
+
+@media (min-width: 61.25rem) {
+  nav li {
+    display: inline;
+  }
 }
 
 .active {
@@ -85,7 +90,8 @@ nav,
 // publications-list component.
 .publications-list {
   margin: 0;
-  padding-left: 1rem;
+  padding: 0;
+  list-style-type: none;
 }
 
 .publications-list li {
@@ -103,7 +109,8 @@ nav,
 // projects-list component.
 .projects-list {
   margin: 0;
-  padding-left: 1rem;
+  padding: 0;
+  list-style-type: none;
 }
 
 .projects-list li {

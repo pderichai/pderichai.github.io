@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import React from "react";
 
-export default function ProjectsList() {
+const Projects = () => {
   const data = useStaticQuery(graphql`
     query ProjectsQuery {
       allProjectsYaml {
@@ -34,7 +34,7 @@ export default function ProjectsList() {
   }, {});
 
   return (
-    <ul className="projects-list">
+    <ul className="projects">
       {projects.map((project) => (
         <li key={project.name}>
           {project.demo_link ? (
@@ -70,4 +70,6 @@ export default function ProjectsList() {
       ))}
     </ul>
   );
-}
+};
+
+export default Projects;

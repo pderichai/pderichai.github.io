@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-export default function PublicationsList() {
+const PublicationsList = () => {
   const data = useStaticQuery(graphql`
     query PublicationsQuery {
       allPublicationsYaml {
@@ -32,7 +32,7 @@ export default function PublicationsList() {
   }, {});
 
   return (
-    <ul className="publications-list">
+    <ul className="publications">
       {publications.map((publication) => (
         <li key={publication.title}>
           <a
@@ -52,4 +52,6 @@ export default function PublicationsList() {
       ))}
     </ul>
   );
-}
+};
+
+export default PublicationsList;

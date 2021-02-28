@@ -1,12 +1,12 @@
 // Responsive widths.
 body {
-  margin: 3em 1.5em 0;
+  margin: 3rem 1.5rem 0;
   max-width: 61.25rem;
 }
 
-@media (min-width: 61.25rem) {
+@media (min-width: 61.25em) {
   body {
-    margin: 7em auto 0;
+    margin: 7rem auto 0;
   }
 }
 
@@ -46,7 +46,6 @@ body {
 }
 
 .site-header {
-  margin-bottom: 1em;
   font-family: $roboto_mono;
   font-size: 1.5rem;
   font-weight: 600;
@@ -56,13 +55,17 @@ body {
   }
 }
 
+nav {
+  margin-bottom: 1.5rem;
+}
+
 nav li {
   margin-right: 1.5rem;
   font-size: 1.25rem;
   font-family: $roboto_mono;
 }
 
-@media (min-width: 61.25rem) {
+@media (min-width: 61.25em) {
   nav li {
     display: inline;
   }
@@ -84,76 +87,76 @@ nav,
 }
 
 .about-links {
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
-// publications-list component.
-.publications-list {
+// Publications component.
+.publications {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.publications-list li {
+.publications li {
   margin-bottom: 1rem;
 }
 
-.publications-list p {
+.publications p {
   margin: 0;
 }
 
-.publications-list a + a {
+.publications a + a {
   margin-left: 0.5rem;
 }
 
-// projects-list component.
-.projects-list {
+// Projects component.
+.projects {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.projects-list li {
+.projects li {
   margin-bottom: 1rem;
 }
 
-.projects-list p {
+.projects p {
   margin: 0;
 }
 
-.projects-list a + a {
+.projects a + a {
   margin-left: 0.5rem;
 }
 
 // Blog post template.
-h3.blog-post {
+h3.post {
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 2rem;
 }
 
-h3.blog-post:before {
+h3.post:before {
   content: counter(h3counter) "\0000a0\0000a0";
   counter-increment: h3counter;
   counter-reset: h4counter;
 }
 
-h4.blog-post {
+h4.post {
   font-size: 1.15rem;
   font-weight: 600;
   margin-top: 1rem;
 }
 
-h4.blog-post:before {
+h4.post:before {
   content: counter(h3counter) "." counter(h4counter) "\0000a0\0000a0";
   counter-increment: h4counter;
 }
 
-p.blog-post {
+p.post {
   text-align: justify;
 }
 
-pre.blog-post {
+pre.post {
   border-style: solid;
   border-color: #d3d3d3;
   border-width: 0.06rem;
@@ -163,11 +166,11 @@ pre.blog-post {
   background-color: #f2f2f2;
 }
 
-ol.blog-post {
+ol.post {
   padding-left: 1.5rem;
 }
 
-.blog-title {
+.post-title {
   counter-reset: h3counter;
   font-size: 1.5rem;
   font-weight: 600;
@@ -176,6 +179,6 @@ ol.blog-post {
   margin-top: 2rem;
 }
 
-.blog-date {
+.post-date {
   text-align: center;
 }

@@ -2,7 +2,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 
 import React from "react";
 
-export default function BlogPosts() {
+const Blog = () => {
   const data = useStaticQuery(graphql`
     query blogIndex {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -26,7 +26,7 @@ export default function BlogPosts() {
   const { edges: posts } = data.allMdx;
 
   return (
-    <ul className="publications-list">
+    <ul className="publications">
       {posts.map(({ node: post }) => (
         <li key={post.frontmatter.title}>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
@@ -35,4 +35,6 @@ export default function BlogPosts() {
       ))}
     </ul>
   );
-}
+};
+
+export default Blog;

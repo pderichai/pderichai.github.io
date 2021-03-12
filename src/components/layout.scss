@@ -11,9 +11,9 @@ body {
 }
 
 // Typography.
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@400;600&display=swap");
-$roboto_mono: "Roboto Mono", monospace;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Code+Pro:wght@400;600&display=swap");
 $inter: "Inter", sans-serif;
+$source_code_pro: "Source Code Pro", monospace;
 $font__weight: 400;
 $font__line-height: 1.5;
 
@@ -46,9 +46,9 @@ body {
 }
 
 .site-header {
-  font-family: $roboto_mono;
+  font-family: $inter;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
 
   a {
     text-decoration: none;
@@ -62,7 +62,7 @@ nav {
 nav li {
   margin-right: 1.5rem;
   font-size: 1.25rem;
-  font-family: $roboto_mono;
+  font-family: $source_code_pro;
 }
 
 @media (min-width: 61.25em) {
@@ -72,7 +72,7 @@ nav li {
 }
 
 .active {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 nav,
@@ -131,7 +131,7 @@ nav,
 // Blog post template.
 h3.post {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 2rem;
 }
 
@@ -143,7 +143,7 @@ h3.post:before {
 
 h4.post {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 1rem;
 }
 
@@ -173,7 +173,7 @@ ol.post {
 .post-title {
   counter-reset: h3counter;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 0;
   margin-top: 2rem;
@@ -181,4 +181,6 @@ ol.post {
 
 .post-date {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }

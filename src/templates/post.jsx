@@ -21,6 +21,11 @@ const MyP = (props) => (
     {props.children}
   </p>
 );
+const MyCode = (props) => (
+  <code className="post" {...props}>
+    {props.children}
+  </code>
+);
 const MyPre = (props) => (
   <pre className="post" {...props}>
     {props.children}
@@ -36,6 +41,7 @@ const components = {
   h1: MyH1,
   h2: MyH2,
   p: MyP,
+  code: MyCode,
   pre: MyPre,
   ol: MyOl,
 };

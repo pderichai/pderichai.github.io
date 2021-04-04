@@ -1,11 +1,11 @@
 import Blog from "../components/blog.jsx";
 import Layout from "../components/layout";
 import React from "react";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const BlogPage = () => (
   <Layout>
-    <SEO />
+    <Seo />
     <Blog />
   </Layout>
 );

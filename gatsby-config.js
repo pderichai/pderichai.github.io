@@ -78,5 +78,13 @@ module.exports = {
         trackingId: "UA-167406818-1",
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Inter', 'Source Code Pro']
+        }
+      }
+    },
   ],
 };

@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const MyH1 = (props) => (
   <h3 className="post" {...props}>
@@ -49,7 +49,7 @@ const components = {
 export default function PostTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <Seo title={mdx.frontmatter.title} />
       <main className="post">
         <h2 className="post-title">{mdx.frontmatter.title}</h2>
         <p className="post-date">{mdx.frontmatter.date}</p>

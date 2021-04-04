@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
 import React from "react";
 import resume from "../assets/pdfs/resume.pdf";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const HomePage = () => (
   <Layout>
-    <SEO />
+    <Seo />
     <p>
       I'm a software engineer at Google working on semantic parsing and question
       answering for Search.

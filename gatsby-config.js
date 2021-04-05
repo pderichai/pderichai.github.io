@@ -82,7 +82,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Inter', 'Source Code Pro']
+          families: ['Inter:400,500,700', 'Source Code Pro:400,500,700']
         }
       }
     },

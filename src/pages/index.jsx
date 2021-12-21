@@ -5,7 +5,7 @@ import Seo from "../components/seo";
 
 const HomePage = () => (
   <Layout>
-    <Seo />
+    <Seo title="Home" />
     <p>
       I'm a software engineer at Google working on semantic parsing and question
       answering for Search.
@@ -27,7 +27,7 @@ const HomePage = () => (
       framework for speech recognition at{" "}
       <a href="https://www.amazon.jobs/en/teams/alexa-ai/">Amazon Alexa AI</a>.
     </p>
-    <div className="about-links">
+    <div className="social-links">
       <ul>
         <li>
           <a href="https://github.com/pderichai">GitHub</a>

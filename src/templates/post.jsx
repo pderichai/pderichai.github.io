@@ -49,7 +49,7 @@ const components = {
 export default function PostTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <Seo title={mdx.frontmatter.title} />
+      <Seo title={mdx.frontmatter.title} description={mdx.excerpt} />
       <main className="post">
         <h2 className="post-title">{mdx.frontmatter.title}</h2>
         <p className="post-date">{mdx.frontmatter.date}</p>
@@ -66,6 +66,7 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      excerpt
       frontmatter {
         title
         date(formatString: "MMM D, YYYY")

@@ -4,7 +4,7 @@ body {
   max-width: 61.25rem;
 }
 
-@media (min-width: 61.25em) {
+@media (min-width: 64.25em) {
   body {
     margin: 7rem auto 0;
   }
@@ -64,7 +64,7 @@ nav li {
   font-family: $source_code_pro;
 }
 
-@media (min-width: 61.25em) {
+@media (min-width: 64.25em) {
   nav li {
     display: inline;
   }

@@ -11,7 +11,14 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = ({ lang, title, description, image }) => {
+const SEO = ({
+  lang,
+  title,
+  description,
+  meta,
+  twitterImage,
+  openGraphImage,
+}) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(
     graphql`
@@ -44,8 +51,12 @@ const SEO = ({ lang, title, description, image }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    twitterImage: `${siteUrl}${image || defaultTwitterImage}`,
-    openGraphImage: `${siteUrl}${image || defaultOpenGraphImage}`,
+    twitterImage: `${siteUrl}${
+      (twitterImage ? twitterImage.src : null) || defaultTwitterImage
+    }`,
+    openGraphImage: `${siteUrl}${
+      (openGraphImage ? openGraphImage.src : null) || defaultOpenGraphImage
+    }`,
     url: `${siteUrl}${pathname}`,
   };
 
@@ -56,43 +67,74 @@ const SEO = ({ lang, title, description, image }) => {
       }}
       title={seo.title}
       titleTemplate={titleTemplate}
-    >
-      <meta name="description" content={seo.description} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-      {seo.openGraphImage && (
-        <meta property="og:image" content={seo.openGraphImage} />
-      )}
-      <meta name="twitter:card" content="summary_large_image" />
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-      {seo.twitterImage && (
-        <meta name="twitter:image" content={seo.twitterImage} />
-      )}
-    </Helmet>
+      link={[
+        {
+          rel: "canonical",
+          href: seo.url,
+        },
+      ]}
+      meta={[
+        {
+          name: "description",
+          content: seo.description,
+        },
+        {
+          property: "og:title",
+          content: seo.title,
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:image",
+          content: seo.openGraphImage,
+        },
+        {
+          property: "og:url",
+          content: seo.url,
+        },
+        {
+          property: "og:description",
+          content: seo.description,
+        },
+        {
+          name: "twitter:creator",
+          content: twitterUsername,
+        },
+        {
+          name: "twitter:title",
+          content: seo.title,
+        },
+        {
+          name: "twitter:description",
+          content: seo.description,
+        },
+        {
+          name: "twitter:image",
+          content: seo.twitterImage,
+        },
+      ].concat(meta)}
+    />
   );
 };
 
 export default SEO;
 
+SEO.defaultProps = {
+  lang: "en",
+  meta: [],
+};
+
 SEO.propTypes = {
   lang: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
-};
-
-SEO.defaultProps = {
-  lang: "en",
-  title: null,
-  description: null,
-  image: null,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }),
+  pathname: PropTypes.string,
 };

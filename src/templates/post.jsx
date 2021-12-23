@@ -1,3 +1,4 @@
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import "katex/dist/katex.min.css";
 import Layout from "../components/layout";
@@ -21,11 +22,12 @@ const MyP = (props) => (
     {props.children}
   </p>
 );
-const MyCode = (props) => (
-  <code className="post" {...props}>
-    {props.children}
-  </code>
-);
+// TODO: For some reason, this doesn't work?
+// const MyCode = (props) => (
+//   <code className="post" {...props}>
+//     {props.children}
+//   </code>
+// );
 const MyPre = (props) => (
   <pre className="post" {...props}>
     {props.children}
@@ -41,22 +43,41 @@ const components = {
   h1: MyH1,
   h2: MyH2,
   p: MyP,
-  code: MyCode,
+  // code: MyCode,
   pre: MyPre,
   ol: MyOl,
 };
 
 export default function PostTemplate({ data: { mdx } }) {
+  const featuredImage = getImage(mdx.frontmatter.featuredImage);
   return (
     <Layout>
-      <Seo title={mdx.frontmatter.title} description={mdx.excerpt} />
-      <main className="post">
-        <h2 className="post-title">{mdx.frontmatter.title}</h2>
-        <p className="post-date">{mdx.frontmatter.date}</p>
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-      </main>
+      <Seo
+        title={mdx.frontmatter.title}
+        description={mdx.excerpt}
+        twitterImage={
+          mdx.frontmatter.twitterImage
+            ? mdx.frontmatter.twitterImage.childImageSharp.resize
+            : null
+        }
+        openGraphImage={
+          mdx.frontmatter.openGraphImage
+            ? mdx.frontmatter.openGraphImage.childImageSharp.resize
+            : null
+        }
+      />
+      <h2 className="post-title">{mdx.frontmatter.title}</h2>
+      <p className="post-date">{mdx.frontmatter.date}</p>
+      {featuredImage && (
+        <GatsbyImage
+          image={featuredImage}
+          alt={mdx.frontmatter.featuredImageAltText}
+          className="post-featured-image"
+        />
+      )}
+      <MDXProvider components={components}>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </MDXProvider>
     </Layout>
   );
 }
@@ -66,10 +87,34 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
-      excerpt
+      excerpt(pruneLength: 160)
       frontmatter {
         title
         date(formatString: "MMM D, YYYY")
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        openGraphImage: featuredImage {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
+        twitterImage: featuredImage {
+          childImageSharp {
+            resize(width: 1200, height: 600) {
+              src
+              height
+              width
+            }
+          }
+        }
+        featuredImageAltText
       }
     }
   }

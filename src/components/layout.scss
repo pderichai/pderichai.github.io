@@ -165,6 +165,13 @@ pre.post {
   background-color: #f2f2f2;
 }
 
+// Formatting code blocks in the posts.
+// TODO: For some reason, passing a custom code component into MDXProvider
+// doesn't work.
+.post code {
+  font-family: $source_code_pro;
+}
+
 ol.post {
   padding-left: 1.5rem;
 }
@@ -182,4 +189,10 @@ ol.post {
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+.post-featured-image {
+  border-radius: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }

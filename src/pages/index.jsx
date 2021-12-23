@@ -33,7 +33,7 @@ const HomePage = () => (
           <a href="https://github.com/pderichai">GitHub</a>
         </li>
         <li>
-          <a href="https://scholar.google.com/citations?user=ktSbCsoAAAAJ&hl=en">
+          <a href="https://scholar.google.com/citations?user=ktSbCsoAAAAJ">
             Google Scholar
           </a>
         </li>

@@ -69,3 +69,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 }
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type MdxFrontmatter {
+      featuredImage: File @fileByRelativePath
+    }
+  `);
+};

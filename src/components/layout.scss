@@ -1,12 +1,12 @@
 // Responsive widths.
 body {
-  margin: 3rem 1.5rem 0;
+  margin: 7rem auto 3rem;
   max-width: 61.25rem;
 }
 
-@media (min-width: 64.25em) {
+@media (max-width: 64.25em) {
   body {
-    margin: 7rem auto 0;
+    margin: 3rem 1.5rem 3rem;
   }
 }
 
@@ -62,11 +62,12 @@ nav li {
   margin-right: 1.5rem;
   font-size: 1.25rem;
   font-family: $source_code_pro;
+  display: inline;
 }
 
-@media (min-width: 64.25em) {
+@media (max-width: 64.25em) {
   nav li {
-    display: inline;
+    display: list-item;
   }
 }
 
@@ -82,6 +83,30 @@ nav,
 
   li {
     list-style-type: none;
+  }
+}
+
+.about {
+  display: flex;
+}
+
+.about-text {
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  flex-grow: 3;
+}
+
+.about-text-first {
+  margin-top: 0;
+}
+
+.about-image {
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 64.25em) {
+  .about {
+    display: block;
   }
 }
 

@@ -60,7 +60,7 @@ const HomePage = () => (
       <StaticImage
         src="../assets/images/headshot.png"
         alt="Headshot of Deric"
-        className="about-image"
+        imgClassName="about-image-img"
       />
     </div>
   </Layout>

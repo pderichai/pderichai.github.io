@@ -73,6 +73,7 @@ export default function PostTemplate({ data: { mdx } }) {
           image={featuredImage}
           alt={mdx.frontmatter.featuredImageAltText}
           className="post-featured-image"
+          imgClassName="post-featured-image-img"
         />
       )}
       <MDXProvider components={components}>

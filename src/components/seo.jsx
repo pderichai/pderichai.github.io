@@ -20,9 +20,9 @@ const SEO = ({
   openGraphImage,
 }) => {
   const { pathname } = useLocation();
-  const { site } = useStaticQuery(
+  const { site, defaultOpenGraphImage, defaultTwitterImage } = useStaticQuery(
     graphql`
-      query {
+      query SeoQuery {
         site {
           siteMetadata {
             defaultTitle: title
@@ -30,34 +30,50 @@ const SEO = ({
             defaultDescription: description
             siteUrl: url
             twitterUsername
-            defaultTwitterImage: twitterImage
-            defaultOpenGraphImage: openGraphImage
+          }
+        }
+        defaultOpenGraphImage: allFile(
+          filter: {
+            sourceInstanceName: { eq: "images" }
+            name: { eq: "og-default-image" }
+          }
+        ) {
+          edges {
+            node {
+              publicURL
+            }
+          }
+        }
+        defaultTwitterImage: allFile(
+          filter: {
+            sourceInstanceName: { eq: "images" }
+            name: { eq: "twitter-default-image" }
+          }
+        ) {
+          edges {
+            node {
+              publicURL
+            }
           }
         }
       }
     `
   );
 
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    twitterUsername,
-    defaultTwitterImage,
-    defaultOpenGraphImage,
-  } = site.siteMetadata;
-
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    twitterImage: `${siteUrl}${
-      (twitterImage ? twitterImage.src : null) || defaultTwitterImage
+    title: title || site.siteMetadata.defaultTitle,
+    titleTemplate: site.siteMetadata.titleTemplate,
+    description: description || site.siteMetadata.defaultDescription,
+    twitterUsername: site.siteMetadata.twitterUsername,
+    openGraphImage: `${site.siteMetadata.siteUrl}${
+      (openGraphImage ? openGraphImage.src : null) ||
+      defaultOpenGraphImage.edges[0].node.publicURL
     }`,
-    openGraphImage: `${siteUrl}${
-      (openGraphImage ? openGraphImage.src : null) || defaultOpenGraphImage
+    twitterImage: `${site.siteMetadata.siteUrl}${
+      (twitterImage ? twitterImage.src : null) ||
+      defaultTwitterImage.edges[0].node.publicURL
     }`,
-    url: `${siteUrl}${pathname}`,
+    url: `${site.siteMetadata.siteUrl}${pathname}`,
   };
 
   return (
@@ -66,7 +82,7 @@ const SEO = ({
         lang,
       }}
       title={seo.title}
-      titleTemplate={titleTemplate}
+      titleTemplate={seo.titleTemplate}
       link={[
         {
           rel: "canonical",
@@ -100,7 +116,7 @@ const SEO = ({
         },
         {
           name: "twitter:creator",
-          content: twitterUsername,
+          content: seo.twitterUsername,
         },
         {
           name: "twitter:title",

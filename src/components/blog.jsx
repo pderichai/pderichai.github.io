@@ -4,7 +4,7 @@ import React from "react";
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
-    query blogIndex {
+    query BlogIndex {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {

@@ -68,6 +68,9 @@ export default function PostTemplate({ data: { mdx } }) {
       />
       <h2 className="post-title">{mdx.frontmatter.title}</h2>
       <p className="post-date">{mdx.frontmatter.date}</p>
+      {mdx.frontmatter.lastUpdated && (
+        <p className="last-updated-date">{`Last updated on ${mdx.frontmatter.lastUpdated}`}</p>
+      )}
       {featuredImage && (
         <GatsbyImage
           image={featuredImage}
@@ -92,6 +95,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMM D, YYYY")
+        lastUpdated(formatString: "MMM D, YYYY")
         featuredImage {
           childImageSharp {
             gatsbyImageData

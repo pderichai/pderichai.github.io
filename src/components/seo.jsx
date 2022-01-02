@@ -62,7 +62,7 @@ const SEO = ({
 
   const seo = {
     title: title || site.siteMetadata.defaultTitle,
-    titleTemplate: site.siteMetadata.titleTemplate,
+    titleTemplate: title ? site.siteMetadata.titleTemplate : null,
     description: description || site.siteMetadata.defaultDescription,
     twitterUsername: site.siteMetadata.twitterUsername,
     openGraphImage: `${site.siteMetadata.siteUrl}${

@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const HomePage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo/>
     <div className="about">
       <div className="about-text">
         <div>

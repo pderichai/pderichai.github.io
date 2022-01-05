@@ -48,6 +48,7 @@ body {
   font-family: $inter;
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 
   a {
     text-decoration: none;
@@ -56,6 +57,10 @@ body {
 
 nav {
   margin-bottom: 1.5rem;
+}
+
+nav ul {
+  margin: 0;
 }
 
 nav li {
@@ -88,11 +93,10 @@ nav,
 
 .about {
   display: flex;
+  gap: 2rem;
 }
 
 .about-text {
-  margin-right: 1rem;
-  margin-bottom: 2rem;
   flex-grow: 3;
 }
 
@@ -107,6 +111,9 @@ nav,
 @media (max-width: 64.25em) {
   .about {
     display: block;
+  }
+  .about-image {
+    margin-bottom: 1.5rem;
   }
 }
 

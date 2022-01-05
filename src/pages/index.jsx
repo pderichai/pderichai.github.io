@@ -8,6 +8,12 @@ const HomePage = () => (
   <Layout>
     <Seo/>
     <div className="about">
+      <StaticImage
+        src="../assets/images/headshot.png"
+        alt="Headshot of Deric"
+        className="about-image"
+        imgClassName="about-image-img"
+      />
       <div className="about-text">
         <div>
           <p className="about-text-first">
@@ -57,11 +63,6 @@ const HomePage = () => (
           </ul>
         </div>
       </div>
-      <StaticImage
-        src="../assets/images/headshot.png"
-        alt="Headshot of Deric"
-        imgClassName="about-image-img"
-      />
     </div>
   </Layout>
 );

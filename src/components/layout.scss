@@ -110,10 +110,10 @@ nav,
 
 @media (max-width: 64.25em) {
   .about {
-    display: block;
+    flex-direction: column;
   }
   .about-image {
-    margin-bottom: 1.5rem;
+    order: -1;
   }
 }
 

@@ -111,9 +111,15 @@ nav,
 @media (max-width: 64.25em) {
   .about {
     flex-direction: column;
+    align-items: center;
   }
   .about-image {
     order: -1;
+    width: 20rem;
+    height: 20rem;
+  }
+  .about-image-img {
+    border-radius: 50%;
   }
 }
 

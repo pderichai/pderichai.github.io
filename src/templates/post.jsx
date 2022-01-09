@@ -57,12 +57,12 @@ export default function PostTemplate({ data: { mdx } }) {
         description={mdx.excerpt}
         twitterImage={
           mdx.frontmatter.twitterImage
-            ? mdx.frontmatter.twitterImage.childImageSharp.resize
+            ? mdx.frontmatter.twitterImage
             : null
         }
         openGraphImage={
           mdx.frontmatter.openGraphImage
-            ? mdx.frontmatter.openGraphImage.childImageSharp.resize
+            ? mdx.frontmatter.openGraphImage
             : null
         }
       />
@@ -103,20 +103,18 @@ export const pageQuery = graphql`
         }
         openGraphImage: featuredImage {
           childImageSharp {
-            resize(width: 1200) {
-              src
-              height
-              width
-            }
+            gatsbyImageData(
+              width: 1200
+              height: 630
+            )
           }
         }
         twitterImage: featuredImage {
           childImageSharp {
-            resize(width: 1200, height: 600) {
-              src
-              height
-              width
-            }
+            gatsbyImageData(
+              width: 1200
+              height: 628
+            )
           }
         }
         featuredImageAltText

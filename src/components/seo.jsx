@@ -5,9 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
-import PropTypes from "prop-types";
+import { getSrc } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
+import React from "react";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -32,28 +33,20 @@ const SEO = ({
             twitterUsername
           }
         }
-        defaultOpenGraphImage: allFile(
-          filter: {
-            sourceInstanceName: { eq: "images" }
-            name: { eq: "og-default-image" }
-          }
+        defaultOpenGraphImage: file(
+          sourceInstanceName: { eq: "images" }
+          name: { eq: "og-default-image" }
         ) {
-          edges {
-            node {
-              publicURL
-            }
+          childImageSharp {
+            gatsbyImageData
           }
         }
-        defaultTwitterImage: allFile(
-          filter: {
-            sourceInstanceName: { eq: "images" }
-            name: { eq: "twitter-default-image" }
-          }
+        defaultTwitterImage: file(
+          sourceInstanceName: { eq: "images" }
+          name: { eq: "twitter-default-image" }
         ) {
-          edges {
-            node {
-              publicURL
-            }
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }
@@ -66,12 +59,12 @@ const SEO = ({
     description: description || site.siteMetadata.defaultDescription,
     twitterUsername: site.siteMetadata.twitterUsername,
     openGraphImage: `${site.siteMetadata.siteUrl}${
-      (openGraphImage ? openGraphImage.src : null) ||
-      defaultOpenGraphImage.edges[0].node.publicURL
+      (openGraphImage ? getSrc(openGraphImage) : null) ||
+      getSrc(defaultOpenGraphImage)
     }`,
     twitterImage: `${site.siteMetadata.siteUrl}${
-      (twitterImage ? twitterImage.src : null) ||
-      defaultTwitterImage.edges[0].node.publicURL
+      (twitterImage ? getSrc(twitterImage) : null) ||
+      getSrc(defaultTwitterImage)
     }`,
     url: `${site.siteMetadata.siteUrl}${pathname}`,
   };

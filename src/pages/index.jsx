@@ -58,7 +58,7 @@ const HomePage = () => {
               <a href="https://github.com/Unity-Technologies/ml-agents">
                 machine learning in a game engine
               </a>{" "}
-              at <a href="https://unity3d.ai/">Unity Technologies</a>,{" "}
+              at <a href="https://unity.com/">Unity Technologies</a>,{" "}
               <a href="https://www.youtube.com/watch?v=pqFGZB8KCnQ">
                 training autonomous robots in simulation
               </a>{" "}

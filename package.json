@@ -2,7 +2,7 @@
   "name": "deric-homepage",
   "private": true,
   "description": "Deric's Homepage",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Deric Pang <pderichai@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

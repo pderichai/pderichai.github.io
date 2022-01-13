@@ -55,7 +55,7 @@ const HomePage = () => {
               , where I was advised by{" "}
               <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>
               . I've previously worked on{" "}
-              <a href="https://github.com/Unity-Technologies/ml-agents">
+              <a href="https://unity.com/products/machine-learning-agents">
                 machine learning in a game engine
               </a>{" "}
               at <a href="https://unity.com/">Unity Technologies</a>,{" "}

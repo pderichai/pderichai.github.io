@@ -12,14 +12,25 @@ import React from "react";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = ({
-  lang,
-  title,
-  description,
-  meta,
-  twitterImage,
-  openGraphImage,
-}) => {
+const propTypes = {
+  lang: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }),
+  pathname: PropTypes.string,
+};
+
+const defaultProps = {
+  lang: "en",
+  meta: [],
+};
+
+function Seo({ lang, title, description, meta, twitterImage, openGraphImage }) {
   const { pathname } = useLocation();
   const { site, defaultOpenGraphImage, defaultTwitterImage } = useStaticQuery(
     graphql`
@@ -126,24 +137,9 @@ const SEO = ({
       ].concat(meta)}
     />
   );
-};
+}
 
-export default SEO;
+Seo.propTypes = propTypes;
+Seo.defaultProps = defaultProps;
 
-SEO.defaultProps = {
-  lang: "en",
-  meta: [],
-};
-
-SEO.propTypes = {
-  lang: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
-  pathname: PropTypes.string,
-};
+export default Seo;

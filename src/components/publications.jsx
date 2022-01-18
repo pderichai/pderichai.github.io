@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-const PublicationsList = () => {
+function PublicationsList() {
   const data = useStaticQuery(graphql`
     query PublicationsQuery {
       allPublicationsYaml {
@@ -52,6 +52,6 @@ const PublicationsList = () => {
       ))}
     </ul>
   );
-};
+}
 
 export default PublicationsList;

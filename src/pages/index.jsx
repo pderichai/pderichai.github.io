@@ -1,11 +1,11 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import React from "react";
 import resume from "../assets/pdfs/resume.pdf";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 import { getImage, GatsbyImage, withArtDirection } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 
-const HomePage = () => {
+function HomePage() {
   const { headshotImage, mobileHeadshotImage } = useStaticQuery(
     graphql`
       query HomeQuery {
@@ -101,6 +101,6 @@ const HomePage = () => {
       </div>
     </Layout>
   );
-};
+}
 
 export default HomePage;

@@ -1,13 +1,15 @@
-import Layout from "../components/layout";
-import Projects from "../components/projects.jsx";
+import Layout from "../components/Layout";
+import Projects from "../components/Projects";
 import React from "react";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 
-const ProjectsPage = () => (
-  <Layout>
-    <Seo title="Projects" />
-    <Projects />
-  </Layout>
-);
+function ProjectsPage() {
+  return (
+    <Layout>
+      <Seo title="Projects" />
+      <Projects />
+    </Layout>
+  );
+}
 
 export default ProjectsPage;

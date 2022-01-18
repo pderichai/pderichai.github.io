@@ -1,11 +1,11 @@
-import "./layout.scss";
+import "./Layout.scss";
 
 import { Link } from "gatsby";
-import Navigation from "../components/navigation.jsx";
+import Navigation from "../components/Navigation";
 import PropTypes from "prop-types";
 import React from "react";
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   return (
     <>
       <header>
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
     </>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

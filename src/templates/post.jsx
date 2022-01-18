@@ -1,11 +1,11 @@
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import "katex/dist/katex.min.css";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 
 const MyH1 = (props) => (
   <h3 className="post" {...props}>
@@ -48,7 +48,7 @@ const components = {
   ol: MyOl,
 };
 
-export default function PostTemplate({ data: { mdx } }) {
+function PostTemplate({ data: { mdx } }) {
   const featuredImage = getImage(mdx.frontmatter.featuredImage);
   return (
     <Layout>
@@ -56,20 +56,18 @@ export default function PostTemplate({ data: { mdx } }) {
         title={mdx.frontmatter.title}
         description={mdx.excerpt}
         twitterImage={
-          mdx.frontmatter.twitterImage
-            ? mdx.frontmatter.twitterImage
-            : null
+          mdx.frontmatter.twitterImage ? mdx.frontmatter.twitterImage : null
         }
         openGraphImage={
-          mdx.frontmatter.openGraphImage
-            ? mdx.frontmatter.openGraphImage
-            : null
+          mdx.frontmatter.openGraphImage ? mdx.frontmatter.openGraphImage : null
         }
       />
       <h2 className="post-title">{mdx.frontmatter.title}</h2>
       <p className="post-date">{mdx.frontmatter.date}</p>
       {mdx.frontmatter.lastUpdated && (
-        <p className="last-updated-date">{`Last updated on ${mdx.frontmatter.lastUpdated}`}</p>
+        <p className="last-updated-date">
+          {`Last updated on ${mdx.frontmatter.lastUpdated}`}
+        </p>
       )}
       {featuredImage && (
         <GatsbyImage
@@ -103,18 +101,12 @@ export const pageQuery = graphql`
         }
         openGraphImage: featuredImage {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              height: 630
-            )
+            gatsbyImageData(width: 1200, height: 630)
           }
         }
         twitterImage: featuredImage {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              height: 628
-            )
+            gatsbyImageData(width: 1200, height: 628)
           }
         }
         featuredImageAltText
@@ -122,3 +114,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default PostTemplate;

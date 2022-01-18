@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import React from "react";
 
-export default function Navigation() {
+function Navigation() {
   const data = useStaticQuery(graphql`
     query MenuQuery {
       site {
@@ -32,3 +32,5 @@ export default function Navigation() {
     </nav>
   );
 }
+
+export default Navigation;

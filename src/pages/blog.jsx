@@ -1,13 +1,15 @@
-import Blog from "../components/blog.jsx";
-import Layout from "../components/layout";
+import Blog from "../components/Blog";
+import Layout from "../components/Layout";
 import React from "react";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 
-const BlogPage = () => (
-  <Layout>
-    <Seo title="Blog" />
-    <Blog />
-  </Layout>
-);
+function BlogPage() {
+  return (
+    <Layout>
+      <Seo title="Blog" />
+      <Blog />
+    </Layout>
+  );
+}
 
 export default BlogPage;

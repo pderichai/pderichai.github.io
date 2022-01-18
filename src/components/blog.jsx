@@ -2,7 +2,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 
 import React from "react";
 
-const Blog = () => {
+function Blog() {
   const data = useStaticQuery(graphql`
     query BlogIndex {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -35,6 +35,6 @@ const Blog = () => {
       ))}
     </ul>
   );
-};
+}
 
 export default Blog;

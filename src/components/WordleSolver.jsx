@@ -1,4 +1,4 @@
-import "./WordleSolver.scss";
+import "./wordle=solver.scss";
 
 import React from "react";
 

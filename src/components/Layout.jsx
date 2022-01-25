@@ -1,4 +1,4 @@
-import "./Layout.scss";
+import "./layout.scss";
 import Navigation from "../components/Navigation";
 
 import { Link } from "gatsby";

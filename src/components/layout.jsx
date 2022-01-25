@@ -1,7 +1,7 @@
 import "./Layout.scss";
+import Navigation from "../components/Navigation";
 
 import { Link } from "gatsby";
-import Navigation from "../components/Navigation";
 import PropTypes from "prop-types";
 import React from "react";
 

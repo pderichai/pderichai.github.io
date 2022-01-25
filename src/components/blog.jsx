@@ -1,6 +1,5 @@
-import { Link, useStaticQuery, graphql } from "gatsby";
-
 import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 function Blog() {
   const data = useStaticQuery(graphql`

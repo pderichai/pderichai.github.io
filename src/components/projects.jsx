@@ -1,6 +1,6 @@
-import { useStaticQuery, graphql } from "gatsby";
-
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+
 
 function Projects() {
   const data = useStaticQuery(graphql`

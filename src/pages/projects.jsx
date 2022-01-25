@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
-import React from "react";
 import Seo from "../components/Seo";
+
+import React from "react";
 
 function ProjectsPage() {
   return (

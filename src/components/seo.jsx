@@ -5,24 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { getSrc } from "gatsby-plugin-image";
+import { GatsbyImage, getSrc } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 import React from "react";
 import { useLocation } from "@reach/router";
-import { useStaticQuery, graphql } from "gatsby";
 
 const propTypes = {
   lang: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
-  pathname: PropTypes.string,
+  twitterImage: PropTypes.instanceOf(GatsbyImage),
+  openGraphImage: PropTypes.instanceOf(GatsbyImage),
 };
 
 const defaultProps = {

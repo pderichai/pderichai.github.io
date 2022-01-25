@@ -1,11 +1,12 @@
-import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import "katex/dist/katex.min.css";
-import Layout from "../components/Layout";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import Seo from "../components/Seo";
 
 const MyH1 = (props) => (
   <h3 className="post" {...props}>

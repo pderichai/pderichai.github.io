@@ -1,9 +1,10 @@
 import Layout from "../components/Layout";
-import React from "react";
 import resume from "../assets/pdfs/resume.pdf";
 import Seo from "../components/Seo";
-import { getImage, GatsbyImage, withArtDirection } from "gatsby-plugin-image";
-import { useStaticQuery, graphql } from "gatsby";
+
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 
 function HomePage() {
   const { headshotImage, mobileHeadshotImage } = useStaticQuery(
@@ -46,7 +47,7 @@ function HomePage() {
         <div className="about-text">
           <div>
             <p className="about-text-first">
-              I'm a software engineer at Google working on semantic parsing and
+              I&apos;m a software engineer at Google working on semantic parsing and
               question answering for Search.
             </p>
             <p>
@@ -54,7 +55,7 @@ function HomePage() {
               <a href="https://www.washington.edu/">University of Washington</a>
               , where I was advised by{" "}
               <a href="https://homes.cs.washington.edu/~nasmith/">Noah Smith</a>
-              . I've previously worked on{" "}
+              . I&apos;ve previously worked on{" "}
               <a href="https://unity.com/products/machine-learning-agents">
                 machine learning in a game engine
               </a>{" "}

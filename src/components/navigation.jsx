@@ -1,6 +1,5 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { Link } from "gatsby";
-
 import React from "react";
 
 function Navigation() {
@@ -21,7 +20,7 @@ function Navigation() {
   return (
     <nav>
       <ul>
-        {links.map((link, index) => (
+        {links.map((link) => (
           <li key={link.name}>
             <Link to={link.link} activeClassName="active">
               {link.name}

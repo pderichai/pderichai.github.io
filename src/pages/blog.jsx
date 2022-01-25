@@ -1,7 +1,8 @@
 import Blog from "../components/Blog";
 import Layout from "../components/Layout";
-import React from "react";
 import Seo from "../components/Seo";
+
+import React from "react";
 
 function BlogPage() {
   return (

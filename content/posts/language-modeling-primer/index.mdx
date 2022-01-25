@@ -1,0 +1,74 @@
+---
+title: Language Modeling Primer
+date: 2021-03-14
+layout: blog
+---
+
+# Introduction
+
+Most large modern neural models for NLU leverage the idea of language modeling.
+These include BERT, GPT-3, T5, etc. Some of these models (like GPT-3 and T5)
+are language models themselves. As such, it's useful to understand the details
+of language modeling and the assumptions that are made.
+
+# What Is a Language Model?
+
+A language model (LM) leverages a corpus to estimate the probability of a
+sequence of tokens.
+
+Consider the following sample of the Brown Corpus[^1] which contains five
+new-line separated sequences, each of which is a sentence:
+
+```
+The Fulton County Grand Jury said Friday an investigation of Atlanta's recent primary election produced `` no evidence '' that any irregularities took place .
+The jury further said in term-end presentments that the City Executive Committee , which had over-all charge of the election , `` deserves the praise and thanks of the City of Atlanta '' for the manner in which the election was conducted .
+The September-October term jury had been charged by Fulton Superior Court Judge Durwood Pye to investigate reports of possible `` irregularities '' in the hard-fought primary which was won by Mayor-nominate Ivan Allen Jr. .
+`` Only a relative handful of such reports was received '' , the jury said , `` considering the widespread interest in the election , the number of voters and the size of this city '' .
+The jury said it did find that many of Georgia's registration and election laws `` are outmoded or inadequate and often ambiguous '' .
+```
+
+What is the probability of the word [the]? One way we might estimate this is to
+count how many times [the] appears and divide it by the total number of tokens
+in the corpus. Running
+```
+$ grep --only-matching --ignore-case --word-regexp "the" brown-sample.txt | wc -l
+```
+says that there are 17 occurences of [the] and running
+```
+$ wc -w brown-sample.txt
+````
+says that there are 188 tokens total. Therefore, we can say that the
+probability of the word [the] is $\frac{17}{188} \approx 9\%$.
+
+To be precise, we will now define an LM mathematically. Let $\mathcal{V}$ be a
+_finite_[^2] set of all tokens containing words like [dog] and [the],
+punctuation like [?], and the special symbols [`UNK`] and [`STOP`] (we'll
+discuss the special tokens in detail later). Let $\mathcal{V}^\dagger$ be the
+_inifite_ set of all possible sequences formed by the tokens in $\mathcal{V}$
+which start with a special [`START`] token and end with [`STOP`]. One possible
+sequence is [`START` the dog ran . `STOP`] which consists of five tokens. We
+will also denote a sequence of tokens $\langle x_1, x_2, ..., x_n \rangle$ by
+$\bm{x}_{1...n}$.
+
+An LM is a function $p(\bm{x}_{1...n})$ which is a probability distribution
+over the sequences in $\mathcal{V}^\dagger$. This means that:
+
+1. $p(\bm{x}_{1...n}) \geq 0$
+
+2. $\sum\limits_{\bm{x}_{1...n} \in \mathcal{V}} p(\bf{x}_{1...n}) = 1$
+
+# $n$-gram Language Models
+
+The model introduced in the previous section (where we just counted the number
+of times "the" appeared) is actually a type of language model model called a
+_unigram_ model. Unigram language models are part of a larger class of models
+known as $n$-gram models. $n$-gram models use the counts of tokens or sequences
+of tokens to model $p$.
+
+# Neural Language Models
+
+# Conclusion
+
+[^1]: TODO(insert citation here)
+[^2]: Languages like English don't have finite vocabularies, but this assumption
+  has to be made for computers.

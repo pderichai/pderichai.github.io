@@ -12,7 +12,7 @@ body {
 
 // Typography.
 $inter: "Inter", sans-serif;
-$source_code_pro: "Source Code Pro", monospace;
+$jetbrains_mono: "JetBrains Mono", monospace;
 $font__weight: 400;
 $font__line-height: 1.5;
 
@@ -66,7 +66,7 @@ nav ul {
 nav li {
   margin-right: 1.5rem;
   font-size: 1.25rem;
-  font-family: $source_code_pro;
+  font-family: $jetbrains_mono;
   display: inline;
 }
 
@@ -197,17 +197,32 @@ pre.post {
   overflow: auto;
   padding: 0.5rem;
   background-color: #f2f2f2;
+  code {
+    font-family: $jetbrains_mono;
+  }
 }
 
 // Formatting code blocks in the posts.
 // TODO: For some reason, passing a custom code component into MDXProvider
 // doesn't work.
-.post code {
-  font-family: $source_code_pro;
+.post:not(pre) code {
+  border-style: solid;
+  border-color: #d3d3d3;
+  border-width: 0.06rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+  padding: 0.1rem;
+  background-color: #f2f2f2;
+  font-family: $jetbrains_mono;
 }
 
 ol.post {
   padding-left: 1.5rem;
+}
+
+img.post {
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 .post-title {

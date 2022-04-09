@@ -23,12 +23,11 @@ const MyP = (props) => (
     {props.children}
   </p>
 );
-// TODO: For some reason, this doesn't work?
-// const MyCode = (props) => (
-//   <code className="post" {...props}>
-//     {props.children}
-//   </code>
-// );
+const MyCode = (props) => (
+  <code className="post" {...props}>
+    {props.children}
+  </code>
+);
 const MyPre = (props) => (
   <pre className="post" {...props}>
     {props.children}
@@ -39,14 +38,26 @@ const MyOl = (props) => (
     {props.children}
   </ol>
 );
+const MyUl = (props) => (
+  <ul className="post" {...props}>
+    {props.children}
+  </ul>
+);
+const MyImg = (props) => (
+  <img className="post" alt="" {...props}>
+    {props.children}
+  </img>
+);
 
 const components = {
   h1: MyH1,
   h2: MyH2,
   p: MyP,
-  // code: MyCode,
+  code: MyCode,
   pre: MyPre,
   ol: MyOl,
+  ul: MyUl,
+  img: MyImg,
 };
 
 function PostTemplate({ data: { mdx } }) {

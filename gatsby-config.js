@@ -1,3 +1,4 @@
+const esmRequire = require('./EsmRequire')
 module.exports = {
   siteMetadata: {
     title: "Deric Pang",
@@ -49,7 +50,30 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        remarkPlugins: [require("remark-math"), require("remark-html-katex")],
+        remarkPlugins: [esmRequire("remark-math").default, esmRequire("remark-html-katex").default],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              //maxWidth: 500,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              // `ignoreFileExtensions` defaults to [`png`, `jpg`, `jpeg`, `bmp`, `tiff`]
+              // as we assume you'll use gatsby-remark-images to handle
+              // images in markdown as it automatically creates responsive
+              // versions of images.
+              //
+              // If you'd like to not use gatsby-remark-images and just copy your
+              // original images to the public directory, set
+              // `ignoreFileExtensions` to an empty array.
+              //ignoreFileExtensions: [],
+            },
+          },
+        ],
       },
     },
     {
@@ -90,7 +114,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Inter:400,500,700", "Source Code Pro:400,500,700"],
+          families: ["Inter:400,500,700", "JetBrains Mono:400,500,700"],
         },
       },
     },

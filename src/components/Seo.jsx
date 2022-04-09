@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { GatsbyImage, getSrc } from "gatsby-plugin-image";
+import { getSrc } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
@@ -17,8 +17,8 @@ const propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  twitterImage: PropTypes.instanceOf(GatsbyImage),
-  openGraphImage: PropTypes.instanceOf(GatsbyImage),
+  twitterImage: PropTypes.object,
+  openGraphImage: PropTypes.object,
 };
 
 const defaultProps = {

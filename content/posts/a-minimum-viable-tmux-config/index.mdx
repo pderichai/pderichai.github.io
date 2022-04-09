@@ -1,15 +1,15 @@
 ---
 title: A Minimum Viable Tmux Config
 date: 2020-05-27
-lastUpdated: 2021-12-30
+lastUpdated: 2022-02-13
 featuredImage: featured-image.png
 featuredImageAltText: Screenshot of Tmux in use
 ---
 
-When I first started using Tmux, I was frustrated with its unintuitive defaults
-and keybindings. Over time, I pinpointed the features that I used the most and
-made them easier to access through better keybindings. I also customized my
-color scheme and status bar and made several quality of life improvements.
+When I first started using Tmux, I was frustrated with its unintuitive
+defaults. Over time, I pinpointed the features that I used the most and made
+them easier to access through better keybindings. I also customized my color
+scheme and status bar and made several quality of life improvements.
 
 When going through this walkthrough, it's best to focus on _what_ I'm
 configuring rather than _how_. Create a small custom config instead of copying
@@ -20,12 +20,12 @@ the key to unlocking their full potential.
 
 The main pieces of functionality that you will use in Tmux are:
 
-- Splitting Tmux "windows" into multiple "panes", each of which is a separate
+- Splitting Tmux "windows" into multiple "panes," each of which is a separate
   shell session.
 - Creating and switching between Tmux "windows" (which are more like tabs),
   each of which contains a number of panes.
-- Creating Tmux sessions which are each a collection of "windows" and "panes".
-- Detaching/switch from a Tmux session so that you can later pick up where you
+- Creating Tmux sessions which are each a collection of "windows" and "panes."
+- Detaching/switching from a Tmux session so that you can pick up where you
   left off with all your windows and panes as you last had them.
 
 # Better Keybindings
@@ -53,11 +53,14 @@ in a text editor.
 Let's set up these keybindings:
 
 - Vertically split the window with `C-b |`
+
+  ![Vertical split in Tmux](vertical-split.gif)
+
 - Horizontally split the window with `C-b -`
 - Navigate between panes with `C-b [h, j, k, l]`
   - These are Vim-like keybindings where `h` is left, `j` is down, `k` is up,
     and `l` is right.
-- Resize panes with `C-b [H, J, K, L]` (can repeatedly hit [H, J, K, L])
+- Resize panes with `C-b [H, J, K, L]` (can repeatedly press [H, J, K, L])
   - Again, these are Vim-like keybindings where `H` expands left, `J` expands
     down, `K` expands up, and `L` expands right.
 

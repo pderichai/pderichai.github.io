@@ -8,7 +8,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "esm": "^3.2.25",
-    "gatsby": "^4.11.2",
+    "gatsby": "^4.25.1",
     "gatsby-plugin-google-analytics": "^4.11.0",
     "gatsby-plugin-image": "^2.11.1",
     "gatsby-plugin-manifest": "^4.11.1",
